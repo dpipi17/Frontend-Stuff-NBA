@@ -5,6 +5,10 @@
     <title>NBA fantasy Login</title>
     <link rel="icon" type="image/png" href="../images/favicon.png" />
     <link rel="stylesheet" href="css/loginstyles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300;1,500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -24,12 +28,43 @@
         </div>
 
         <div class="login_container">
-            <h3>Account Details</h3>
+            <h2>Account Details</h2>
             <hr class="solid">
-            <h4>Sign Into Your NBA Fantasy Account</h4>
+            <h3>Sign Into Your NBA Fantasy Account</h3>
+
+            <div class="signin">
+                <form action="../index.html" class="sign-in-form">
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Username" />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Password" />
+                    </div>
+                    <input type="submit" value="LOGIN" class="btn" />
+
+                    <p class="social-text">Or Sign in with social platforms</p>
+                    <div class="social-media">
+                        <a href="../index.html" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="../index.html" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="../index.html" class="social-icon">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="../index.html" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 
+    <script src="js/login.js"></script>
 </body>
 
 </html>
