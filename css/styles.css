@@ -61,5 +61,23 @@ body {
     transform: rotate(-180deg);
 }
 
+#slideshow {
+    margin-top: 50px;
+}
+
+#slideshow img {
+    object-fit: contain;
+    width: 1000px;
+}
+
+[data-component="slideshow"] .slide {
+    display: none;
+    text-align: center;
+}
+
+[data-component="slideshow"] .slide.active {
+    display: block;
+}
+
 
 /*# sourceMappingURL=styles.css.map */
