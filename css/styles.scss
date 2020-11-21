@@ -17,6 +17,11 @@ body {
             display: flex;
             flex-direction: row;
             width: 50%;
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
             .navigation {
                 display: flex;
                 flex-direction: row;

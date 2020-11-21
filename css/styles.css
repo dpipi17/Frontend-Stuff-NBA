@@ -16,6 +16,10 @@ body {
       display: flex;
       flex-direction: row;
       width: 50%; }
+      .header .header_content .header_left_part a {
+        display: flex;
+        justify-content: center;
+        align-items: center; }
       .header .header_content .header_left_part .navigation {
         display: flex;
         flex-direction: row;
