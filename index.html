@@ -5,14 +5,16 @@
     <title>NBA fantasy</title>
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
     <div class="header">
+        <label for="toggle">&#9776;</label>
+        <input type="checkbox" id="toggle" />
         <div class="header_content">
             <div class="header_left_part">
                 <a href="#"><img src="images/logo.svg"></a>
-                <!-- <img src="images/logo.svg"> -->
                 <div class="navigation">
                     <a href="#Games">Games</a>
                     <a href="#Standings">Standings</a>
@@ -24,14 +26,12 @@
             </div>
 
             <div class="header_right_part">
-                <div class="navigation">
-                    <a href="#SignIn">Sign In</a>
-                </div>
+                <a href="#SignIn">Sign In</a>
             </div>
         </div>
     </div>
 
-    <div id="slideshow" data-component="slideshow">
+    <!-- <div id="slideshow" data-component="slideshow">
         <div role="list">
             <div class="slide">
                 <img src="https://cdn.nba.com/manage/2020/11/klay-thompson.jpg" alt="">
@@ -43,7 +43,7 @@
                 <img src="https://cdn.nba.com/manage/2020/11/james-wiseman-draft.jpg" alt="">
             </div>
         </div>
-    </div>
+    </div> -->
 
     <script src="js/script.js"></script>
 </body>
