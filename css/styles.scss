@@ -69,7 +69,7 @@ body {
     margin-top: 50px;
     img {
         object-fit: contain;
-        width: 1000px;
+        width: 800px;
     }
 }
 
@@ -104,5 +104,10 @@ body {
     }
     #toggle:checked~.navigation {
         display: block !important;
+    }
+    #slideshow {
+        img {
+            width: 400px;
+        }
     }
 }

@@ -24,18 +24,49 @@
 const breakPoint = window.matchMedia("screen and (max-width: 850px)");
 
 function handle_resize(breakPoint) {
-    var burger_menu_nav = document.querySelector('.header');
     var navigation = document.querySelector('.navigation');
+    var burger_menu_nav = document.querySelector('.header');
     var header_left_part = document.querySelector('.header_left_part');
 
+    navigation.parentNode.removeChild(navigation);
     if (breakPoint.matches) {
-        header_left_part.removeChild(navigation);
         burger_menu_nav.appendChild(navigation);
     } else {
-        burger_menu_nav.removeChild(navigation);
         header_left_part.appendChild(navigation);
     }
 }
 
 breakPoint.addListener(handle_resize)
 handle_resize(breakPoint)
+
+
+
+let routes = {
+    '*': () => {
+        alert("Home")
+    },
+    '/Games': () => {
+        alert("Games")
+    },
+    '/Standings': () => {
+        alert("Standings")
+    },
+    '/Teams': () => {
+        alert("Teams")
+    },
+    '/Stats': () => {
+        alert("Stats")
+    },
+    '/Players': () => {
+        alert("Players")
+    },
+    '/Fantasy': () => {
+        alert("Fantasy")
+    },
+
+};
+
+window.addEventListener("load", () => {
+    var router = new Navigo(null, true, '#');
+    router.on(routes).resolve();
+})

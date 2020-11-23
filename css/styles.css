@@ -57,7 +57,7 @@ body {
   margin-top: 50px; }
   #slideshow img {
     object-fit: contain;
-    width: 1000px; }
+    width: 800px; }
 
 [data-component="slideshow"] .slide {
   display: none;
@@ -84,6 +84,9 @@ body {
       margin: 10px 0px 0px; }
 
   #toggle:checked ~ .navigation {
-    display: block !important; } }
+    display: block !important; }
+
+  #slideshow img {
+    width: 400px; } }
 
 /*# sourceMappingURL=styles.css.map */
