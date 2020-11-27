@@ -60,7 +60,6 @@ body {
   display: flex; }
 
 my-slide .slide {
-  margin-top: 10px;
   background-color: black; }
   my-slide .slide img {
     display: flex;
