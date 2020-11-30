@@ -1,13 +1,16 @@
 import SlideShow from './slideshow.js'
+import Articles from './articles.js'
 
 export default class HomePage {
     static render(params) {
         return `
             <div>
                 ${SlideShow.render()}
+                ${Articles.render()}
             </div>
         `
     }
+
     static after() {
         var slideshows = document.querySelectorAll('[data-component="slideshow"]');
         slideshows.forEach(initSlideShow);
