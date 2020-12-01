@@ -2,16 +2,18 @@ import SlideShow from './slideshow.js'
 import Articles from './articles.js'
 
 export default class HomePage {
-    static render(params) {
-        return `
+    static render(callback) {
+        var content = `
             <div>
                 ${SlideShow.render()}
                 ${Articles.render()}
             </div>
-        `
+        `;
+        callback(content);
+        this.slideShow();
     }
 
-    static after() {
+    static slideShow() {
         var slideshows = document.querySelectorAll('[data-component="slideshow"]');
         slideshows.forEach(initSlideShow);
 
