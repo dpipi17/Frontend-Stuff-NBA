@@ -133,6 +133,38 @@ my-article {
     align-items: center;
 }
 
+my-team {
+    .team {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        height: 400px;
+        margin: 10px;
+        color: inherit;
+        text-decoration: none;
+        justify-content: space-around;
+        align-items: center;
+        img {
+            display: flex;
+            width: 80%;
+            height: 80%;
+            object-fit: contain;
+        }
+    }
+    .team:hover {
+        background-color: $base-white;
+        border-radius: 10%;
+    }
+}
+
+.teams {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
 .footer {
     display: flex;
     justify-content: space-around;

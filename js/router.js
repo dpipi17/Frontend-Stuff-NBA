@@ -12,7 +12,7 @@ let routes = {
         updateMainContainer('<h1>Standings</h1>');
     },
     '/Teams': () => {
-        updateMainContainer(TeamsPage.render());
+        TeamsPage.render(updateMainContainer);
     },
     '/Stats': () => {
         updateMainContainer('<h1>Stats</h1>');
