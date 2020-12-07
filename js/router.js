@@ -1,5 +1,6 @@
 import HomePage from './../Home Page/home.js';
 import TeamsPage from './../Teams page/teams.js'
+import StandingPage from './../Standing Page/standing.js'
 
 let routes = {
     '*': () => {
@@ -9,7 +10,7 @@ let routes = {
         updateMainContainer('<h1>Games</h1>');
     },
     '/Standings': () => {
-        updateMainContainer('<h1>Standings</h1>');
+        StandingPage.render(updateMainContainer);
     },
     '/Teams': () => {
         TeamsPage.render(updateMainContainer);

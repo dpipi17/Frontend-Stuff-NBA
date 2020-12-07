@@ -131,6 +131,45 @@ my-team .team:hover {
   justify-content: space-around;
   align-items: center; }
 
+.standings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+.conference_standing {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 70%;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 0.5%;
+  padding: 30px; }
+  .conference_standing .table {
+    width: 100%; }
+  .conference_standing .table_header th {
+    background-color: rgba(201, 201, 201, 0.4); }
+  .conference_standing .table th,
+  .conference_standing .table td {
+    text-align: center;
+    padding: 0.25em; }
+  .conference_standing .standing_row td {
+    border-bottom: 1px dotted #bbb5b5;
+    border-right: 1px dotted #bbb5b5; }
+  .conference_standing .standing_row:hover {
+    background-color: rgba(1, 154, 255, 0.15); }
+
+my-team-row .team_name_row {
+  display: flex;
+  align-items: center;
+  width: 230px;
+  text-decoration: none;
+  color: inherit; }
+  my-team-row .team_name_row img {
+    display: flex;
+    width: 10%;
+    object-fit: contain;
+    margin: 0px 10px; }
+
 .footer {
   display: flex;
   justify-content: space-around;
