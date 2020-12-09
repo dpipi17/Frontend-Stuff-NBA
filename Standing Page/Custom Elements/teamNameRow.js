@@ -6,7 +6,7 @@ export default class TeamNameRow extends HTMLElement {
         let rank = this.getAttribute('rank');
         this.innerHTML = `
             <a class="team_name_row" href="${teamPageSrc}">
-                <p>${rank}</p>
+                <p><b>${rank}</b></p>
                 <img src=${imgSrc} alt="">
                 <p>${name}</p>
             </a>

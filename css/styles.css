@@ -157,18 +157,17 @@ my-team .team:hover {
     border-right: 1px dotted #bbb5b5; }
   .conference_standing .standing_row:hover {
     background-color: rgba(1, 154, 255, 0.15); }
-
-my-team-row .team_name_row {
-  display: flex;
-  align-items: center;
-  width: 230px;
-  text-decoration: none;
-  color: inherit; }
-  my-team-row .team_name_row img {
+  .conference_standing my-team-row .team_name_row {
     display: flex;
-    width: 10%;
-    object-fit: contain;
-    margin: 0px 10px; }
+    align-items: center;
+    width: 230px;
+    text-decoration: none;
+    color: inherit; }
+    .conference_standing my-team-row .team_name_row img {
+      display: flex;
+      width: 10%;
+      object-fit: contain;
+      margin: 0px 10px; }
 
 .footer {
   display: flex;
@@ -203,6 +202,11 @@ my-team-row .team_name_row {
     width: 50%; }
   my-slide .slide .text_container p {
     font-size: 20px; } }
+@media screen and (max-width: 1100px) {
+  .conference_standing {
+    font-size: 15px; }
+    .conference_standing .hide {
+      display: none; } }
 @media screen and (max-width: 850px) {
   .header label {
     display: block;
@@ -252,6 +256,17 @@ my-team-row .team_name_row {
   .footer {
     flex-direction: column-reverse;
     justify-content: center;
-    padding-top: 40px; } }
+    padding-top: 40px; }
+
+  .conference_standing {
+    font-size: 12px;
+    width: 90%;
+    padding: 10px; }
+    .conference_standing .hide {
+      display: none; }
+    .conference_standing my-team-row .team_name_row {
+      width: 130px; }
+      .conference_standing my-team-row .team_name_row img {
+        margin: 0px 5px; } }
 
 /*# sourceMappingURL=styles.css.map */

@@ -12,11 +12,11 @@ export default class ConferenceStanding {
               <th>WIN%</th>
               <th>GB</th>
               <th>CONF</th>
-              <th>DIV</th>
-              <th>HOME</th>
-              <th>ROAD</th>
-              <th>LAST 10</th>
-              <th>STREAK</th>
+              <th class="hide">DIV</th>
+              <th class="hide">HOME</th>
+              <th class="hide">ROAD</th>
+              <th class="hide">LAST 10</th>
+              <th class="hide">STREAK</th>
             </tr>
         `;
     }
@@ -36,11 +36,11 @@ export default class ConferenceStanding {
             <td>${teamData.winPct}</td>
             <td>${teamData.gamesBehind}</td>
             <td>${teamData.confWin}-${teamData.confLoss}</td>
-            <td>${teamData.divWin}-${teamData.divLoss}</td>
-            <td>${teamData.homeWin}-${teamData.homeLoss}</td>
-            <td>${teamData.awayWin}-${teamData.awayLoss}</td>
-            <td>${teamData.lastTenWin}-${teamData.lastTenLoss}</td>
-            <td>${teamData.teamSitesOnly.streakText}</td>
+            <td class="hide">${teamData.divWin}-${teamData.divLoss}</td>
+            <td class="hide">${teamData.homeWin}-${teamData.homeLoss}</td>
+            <td class="hide">${teamData.awayWin}-${teamData.awayLoss}</td>
+            <td class="hide">${teamData.lastTenWin}-${teamData.lastTenLoss}</td>
+            <td class="hide">${teamData.teamSitesOnly.streakText}</td>
           </tr>
         `;
     }
