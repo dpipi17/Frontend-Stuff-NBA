@@ -169,6 +169,45 @@ my-team .team:hover {
       object-fit: contain;
       margin: 0px 10px; }
 
+.games {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 70px; }
+  .games .datePicker {
+    height: 100px;
+    width: 70%;
+    background-color: rgba(255, 255, 255, 0.95); }
+  .games .gameCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 300px;
+    width: 70%; }
+    .games .gameCards my-game-card {
+      background-color: rgba(255, 255, 255, 0.95);
+      width: 45%;
+      margin: 20px 0px; }
+      .games .gameCards my-game-card .gamecard {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-decoration: none;
+        color: inherit;
+        padding: 30px; }
+        .games .gameCards my-game-card .gamecard .team_in_card {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column; }
+          .games .gameCards my-game-card .gamecard .team_in_card img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain; }
+
 .footer {
   display: flex;
   justify-content: space-around;

@@ -7,7 +7,7 @@ export default class Team extends HTMLElement {
             <a class="team" href="${teamPageSrc}">
                 <img src=${imgSrc} alt="">
                 <h3>${name}</h3>
-            </div>
+            </a>
         `;
     }
 }

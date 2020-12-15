@@ -218,6 +218,52 @@ my-team {
     }
 }
 
+.games {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 70px;
+    .datePicker {
+        height: 100px;
+        width: 70%;
+        background-color: $base-white;
+    }
+    .gameCards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 300px;
+        width: 70%;
+        my-game-card {
+            background-color: $base-white;
+            width: 45%;
+            margin: 20px 0px;
+            .gamecard {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                text-decoration: none;
+                color: inherit;
+                padding: 30px;
+                .team_in_card {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    img {
+                        width: 80px;
+                        height: 80px;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .footer {
     display: flex;
     justify-content: space-around;

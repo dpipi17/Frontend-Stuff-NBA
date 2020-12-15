@@ -1,13 +1,26 @@
 import HomePage from './../Home Page/home.js';
 import TeamsPage from './../Teams page/teams.js'
 import StandingPage from './../Standing Page/standing.js'
+import GamesPage from './../Games Page/games.js'
 
 let routes = {
     '*': () => {
         HomePage.render(updateMainContainer);
     },
     '/Games': () => {
-        updateMainContainer('<h1>Games</h1>');
+        var today = new Date();
+        var year = today.getFullYear();
+        var month = (today.getMonth() + 1);
+        var day = today.getDate();
+        var gameDate = year.toString() + (month < 10 ? '0' + month.toString() : month.toString) + (day < 10 ? '0' + day.toString() : day.toString());
+
+        GamesPage.render(updateMainContainer, gameDate)
+    },
+    '/Games/:gameDate': (params) => {
+        GamesPage.render(updateMainContainer, params.gameDate)
+    },
+    '/Game/:gameId': (params) => {
+        alert(params.gameId);
     },
     '/Standings': () => {
         StandingPage.render(updateMainContainer);
