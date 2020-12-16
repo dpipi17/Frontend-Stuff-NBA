@@ -185,7 +185,7 @@ my-team .team:hover {
     justify-content: space-between;
     align-items: center;
     margin-top: 50px;
-    margin-bottom: 300px;
+    margin-bottom: 100px;
     width: 70%; }
     .games .gameCards my-game-card {
       background-color: rgba(255, 255, 255, 0.95);
@@ -207,6 +207,12 @@ my-team .team:hover {
             width: 80px;
             height: 80px;
             object-fit: contain; }
+        .games .gameCards my-game-card .gamecard .cardMiddle {
+          display: flex;
+          align-items: center;
+          justify-content: center; }
+          .games .gameCards my-game-card .gamecard .cardMiddle h3 {
+            margin: 0px 30px; }
 
 .footer {
   display: flex;
@@ -241,11 +247,18 @@ my-team .team:hover {
     width: 50%; }
   my-slide .slide .text_container p {
     font-size: 20px; } }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1250px) {
   .conference_standing {
     font-size: 15px; }
     .conference_standing .hide {
-      display: none; } }
+      display: none; }
+
+  .games .gameCards {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap; }
+    .games .gameCards my-game-card {
+      width: 100%; } }
 @media screen and (max-width: 850px) {
   .header label {
     display: block;
@@ -291,6 +304,20 @@ my-team .team:hover {
 
   .articles {
     justify-content: center; }
+
+  .games .datePicker {
+    width: 95%; }
+  .games .gameCards {
+    width: 95%; }
+    .games .gameCards my-game-card {
+      margin: 10px 0px; }
+      .games .gameCards my-game-card .gamecard {
+        padding: 10px; }
+        .games .gameCards my-game-card .gamecard .team_in_card img {
+          width: 50px;
+          height: 50px; }
+        .games .gameCards my-game-card .gamecard .cardMiddle h3 {
+          margin: 0px 20px; }
 
   .footer {
     flex-direction: column-reverse;

@@ -235,7 +235,7 @@ my-team {
         justify-content: space-between;
         align-items: center;
         margin-top: 50px;
-        margin-bottom: 300px;
+        margin-bottom: 100px;
         width: 70%;
         my-game-card {
             background-color: $base-white;
@@ -257,6 +257,14 @@ my-team {
                         width: 80px;
                         height: 80px;
                         object-fit: contain;
+                    }
+                }
+                .cardMiddle {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    h3 {
+                        margin: 0px 30px;
                     }
                 }
             }
@@ -311,11 +319,21 @@ my-team {
     }
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1250px) {
     .conference_standing {
         font-size: 15px;
         .hide {
             display: none;
+        }
+    }
+    .games {
+        .gameCards {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            my-game-card {
+                width: 100%;
+            }
         }
     }
 }
@@ -378,6 +396,31 @@ my-team {
     }
     .articles {
         justify-content: center;
+    }
+    .games {
+        .datePicker {
+            width: 95%;
+        }
+        .gameCards {
+            width: 95%;
+            my-game-card {
+                margin: 10px 0px;
+                .gamecard {
+                    padding: 10px;
+                    .team_in_card {
+                        img {
+                            width: 50px;
+                            height: 50px;
+                        }
+                    }
+                    .cardMiddle {
+                        h3 {
+                            margin: 0px 20px;
+                        }
+                    }
+                }
+            }
+        }
     }
     .footer {
         flex-direction: column-reverse;
