@@ -8,13 +8,7 @@ let routes = {
         HomePage.render(updateMainContainer);
     },
     '/Games': () => {
-        var today = new Date();
-        var year = today.getFullYear();
-        var month = (today.getMonth() + 1);
-        var day = today.getDate();
-        var gameDate = year.toString() + (month < 10 ? '0' + month.toString() : month.toString) + (day < 10 ? '0' + day.toString() : day.toString());
-
-        GamesPage.render(updateMainContainer, gameDate)
+        GamesPage.render(updateMainContainer, GamesPage.dateToGameDate(new Date()))
     },
     '/Games/:gameDate': (params) => {
         GamesPage.render(updateMainContainer, params.gameDate)

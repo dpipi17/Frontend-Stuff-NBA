@@ -224,10 +224,25 @@ my-team {
     align-items: center;
     flex-direction: column;
     margin-top: 70px;
-    .datePicker {
-        height: 100px;
+    .datePickerContainer {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        height: 50px;
         width: 70%;
         background-color: $base-white;
+        my-date-picker {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 18px;
+                height: 25px;
+            }
+            #dt {
+                margin: 0px 20px;
+            }
+        }
     }
     .gameCards {
         display: flex;
@@ -268,6 +283,10 @@ my-team {
                     }
                 }
             }
+        }
+        my-game-card:hover {
+            opacity: 0.8;
+            transform: translateY(2px);
         }
     }
 }
@@ -398,7 +417,7 @@ my-team {
         justify-content: center;
     }
     .games {
-        .datePicker {
+        .datePickerContainer {
             width: 95%;
         }
         .gameCards {
