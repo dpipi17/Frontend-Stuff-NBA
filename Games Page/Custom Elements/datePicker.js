@@ -6,9 +6,9 @@ export default class DatePicker extends HTMLElement {
 
         var dateStr = this.getAttribute('dateStr');
         this.innerHTML = `
-            <img id="prev_day" src="images/left-arrow.svg">
+            <input class="arrow_img" id="prev_day" type="image" src="images/left-arrow.svg" />
             <input type="date" value="${dateStr}" id="dt"/>
-            <img id="next_day" src="images/right-arrow.svg">
+            <input class="arrow_img" id="next_day" type="image" src="images/right-arrow.svg" />
         `;
 
         this.picker = document.getElementById("dt");
@@ -24,7 +24,7 @@ export default class DatePicker extends HTMLElement {
         });
 
         this.next.addEventListener('click', () => {
-            this.changeDate(this.picker.value, +1);
+            this.changeDate(this.picker.value, 1);
         });
     }
 

@@ -186,11 +186,24 @@ my-team .team:hover {
       display: flex;
       justify-content: center;
       align-items: center; }
-      .games .datePickerContainer my-date-picker img {
+      .games .datePickerContainer my-date-picker .arrow_img {
         width: 18px;
         height: 25px; }
       .games .datePickerContainer my-date-picker #dt {
         margin: 0px 20px; }
+      .games .datePickerContainer my-date-picker [type="date"] {
+        background: #fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png) 97% 50% no-repeat; }
+      .games .datePickerContainer my-date-picker [type="date"]::-webkit-inner-spin-button {
+        display: none; }
+      .games .datePickerContainer my-date-picker [type="date"]::-webkit-calendar-picker-indicator {
+        opacity: 0; }
+      .games .datePickerContainer my-date-picker input {
+        border: 1px solid #c4c4c4;
+        border-radius: 5px;
+        background-color: #fff;
+        padding: 3px 5px;
+        box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+        width: 190px; }
   .games .gameCards {
     display: flex;
     flex-wrap: wrap;
@@ -202,7 +215,8 @@ my-team .team:hover {
     .games .gameCards my-game-card {
       background-color: rgba(255, 255, 255, 0.95);
       width: 45%;
-      margin: 20px 0px; }
+      margin: 20px 0px;
+      border-radius: 10px; }
       .games .gameCards my-game-card .gamecard {
         display: flex;
         justify-content: space-between;
@@ -228,6 +242,11 @@ my-team .team:hover {
     .games .gameCards my-game-card:hover {
       opacity: 0.8;
       transform: translateY(2px); }
+    .games .gameCards .messageContainer {
+      margin: 200px 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
 
 .footer {
   display: flex;

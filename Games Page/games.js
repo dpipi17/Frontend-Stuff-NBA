@@ -22,10 +22,17 @@ export default class GamesPage {
             .then(response => response.json())
             .then((json) => {
                 callback(json.games);
-            });
+            })
+            .catch(callback([]));
     }
 
     static renderGameCards(games) {
+        if (games.length == 0) {
+            return `
+                <div class="messageContainer"> 
+                </div>
+            `;
+        }
         return games.map(game => `
             <my-game-card data=${encodeURIComponent(JSON.stringify(game))}> </my-game-card>
         `).join(' ');
