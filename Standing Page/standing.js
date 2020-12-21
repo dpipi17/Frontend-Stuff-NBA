@@ -3,7 +3,7 @@ import ConferenceStanding from './conferenceStanding.js'
 export default class StandingPage {
 
     static loadConferenceStandings(callback) {
-        fetch("http://data.nba.net/prod/v1/current/standings_conference.json", {
+        fetch("https://data.nba.net/prod/v1/current/standings_conference.json", {
                 "method": "GET"
             })
             .then(response => response.json())

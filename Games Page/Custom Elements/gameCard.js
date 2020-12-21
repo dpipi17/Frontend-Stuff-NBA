@@ -19,7 +19,7 @@ export default class GameCard extends HTMLElement {
     connectedCallback() {
         var game = JSON.parse(decodeURIComponent(this.getAttribute('data')));
         this.innerHTML = `
-            <a class="gamecard" href="#/Game/${game.gameId}">
+            <a class="gamecard" href="https://www.nba.com/game/${game.vTeam.triCode.toLowerCase()}-vs-${game.hTeam.triCode.toLowerCase()}-${game.gameId}">
                 <div class="team_in_card">
                     <img src=${TeamsPage.photo_links[game.vTeam.triCode]} alt="">
                     <h3>${game.vTeam.triCode}</h3>

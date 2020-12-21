@@ -16,7 +16,7 @@ export default class GamesPage {
     }
 
     static loadGames(callback, gameDate) {
-        fetch("http://data.nba.net/prod/v2/" + gameDate + "/scoreboard.json", {
+        fetch("https://data.nba.net/prod/v2/" + gameDate + "/scoreboard.json", {
                 "method": "GET"
             })
             .then(response => response.json())
