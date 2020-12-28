@@ -315,6 +315,60 @@ my-team {
     }
 }
 
+.players {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .comboBoxContainer {
+        margin: 50px 0px;
+        padding: 20px 0px 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $base-white;
+        width: 80%;
+        my-select-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            select {
+                -webkit-appearance: button;
+                -moz-appearance: button;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -webkit-padding-end: 20px;
+                -moz-padding-end: 20px;
+                -webkit-padding-start: 2px;
+                -moz-padding-start: 2px;
+                background-color: $base-white;
+                background-position: center right;
+                background-repeat: no-repeat;
+                border: 1px solid $base-white;
+                border-radius: 2px;
+                box-shadow: 0px 1px 3px $base-blue;
+                color: black;
+                font-size: inherit;
+                margin: 0;
+                overflow: hidden;
+                padding-top: 2px;
+                padding-bottom: 2px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+    }
+    .roster {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 80%;
+        background-color: $base-white;
+    }
+}
+
 .footer {
     display: flex;
     justify-content: space-around;
