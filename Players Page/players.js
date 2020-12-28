@@ -5,7 +5,7 @@ export default class PlayersPage {
     static loadData(callback, team) {
         var teams = fetch('data/teams.json')
             .then(response => response.json());
-        var roster = fetch("http://data.nba.net/json/cms/noseason/team/" + team + "/roster.json", {
+        var roster = fetch("https://data.nba.net/json/cms/noseason/team/" + team + "/roster.json", {
                 "method": "GET"
             })
             .then(response => response.json())
@@ -17,7 +17,7 @@ export default class PlayersPage {
 
     static renderRoster(roster) {
         return `
-            ${roster.map(player => "<h2>" + player.display_name + "</h2>").join(' ')}
+            ${roster.map(player => '<img src="https://cdn.nba.com/headshots/nba/latest/1040x760/' + player.person_id + '.png"></img>').join(' ')}
         `;
     }
 
