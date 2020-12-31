@@ -359,13 +359,67 @@ my-team {
             }
         }
     }
-    .roster {
+    .rostercontainer {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         width: 80%;
         background-color: $base-white;
+        .roster {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            .styled-table {
+                border-collapse: collapse;
+                margin: 25px 0;
+                font-size: 0.9em;
+                font-family: sans-serif;
+                min-width: 400px;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+                thead {
+                    tr {
+                        background-color: #c9c9c9;
+                        color: #0c0505;
+                        text-align: left;
+                    }
+                }
+                th,
+                td {
+                    padding: 8px 50px;
+                }
+                tbody {
+                    .roster_row {
+                        border-bottom: 1px solid #c9c9c9;
+                        text-align: center;
+                        .player_field {
+                            display: flex;
+                            align-items: center;
+                            text-decoration: none;
+                            img {
+                                width: 50px;
+                                height: 50px;
+                                object-fit: contain;
+                            }
+                            p {
+                                margin-left: 10px;
+                            }
+                        }
+                        .player_field:visited {
+                            color: #0000EE;
+                        }
+                        .player_field:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                    .roster_row:hover {
+                        background-color: rgba(1, 154, 255, 0.15);
+                    }
+                }
+            }
+        }
     }
 }
 

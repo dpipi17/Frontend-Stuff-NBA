@@ -1,4 +1,5 @@
 import SelectBox from './Custom Elements/selectBox.js'
+import Roster from './roster.js'
 
 export default class PlayersPage {
 
@@ -15,12 +16,6 @@ export default class PlayersPage {
         });
     }
 
-    static renderRoster(roster) {
-        return `
-            ${roster.map(player => '<img src="https://cdn.nba.com/headshots/nba/latest/1040x760/' + player.person_id + '.png"></img>').join(' ')}
-        `;
-    }
-
     static render(callback, team = "lakers") {
         this.loadData((teams, roster) => {
             console.log(teams);
@@ -34,8 +29,8 @@ export default class PlayersPage {
                     </div>
 
 
-                    <div class="roster">
-                        ${this.renderRoster(roster)}
+                    <div class="rostercontainer">
+                        ${Roster.render(roster, team)}
                     </div>
                 </div>
             `;

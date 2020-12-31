@@ -29,6 +29,10 @@ let routes = {
     '/Players/:team': (params) => {
         PlayersPage.render(updateMainContainer, params.team);
     },
+    '/Player/:playerId': (params) => {
+        //todo
+        alert(params.playerId);
+    },
     '/Fantasy': () => {
         updateMainContainer('<h1>Fantasy</h1>');
     },
