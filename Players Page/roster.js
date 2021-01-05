@@ -9,8 +9,8 @@ export default class Roster {
                     <th>POSITION</th>
                     <th>HEIGHT</th>
                     <th>WEIGHT</th>
-                    <th>BIRTH YEAR</th>
-                    <th>COUNTRY</th>
+                    <th class="hide">BIRTH YEAR</th>
+                    <th class="hide">COUNTRY</th>
                 </tr>
             </thead>
         `;
@@ -29,8 +29,8 @@ export default class Roster {
                     <td>${player.position_short}</td>
                     <td>${player.height_ft}-${player.height_in}</td>
                     <td>${player.weight_lbs} lbs</td>
-                    <td>${player.birth_date.substring(0, 4)}</td>
-                    <td>${player.elias_country}</td>
+                    <td class="hide">${player.birth_date.substring(0, 4)}</td>
+                    <td class="hide">${player.elias_country}</td>
                 </tr>  
         `;
     }

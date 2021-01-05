@@ -377,7 +377,6 @@ my-team {
                 margin: 25px 0;
                 font-size: 0.9em;
                 font-family: sans-serif;
-                min-width: 400px;
                 box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
                 thead {
                     tr {
@@ -469,6 +468,33 @@ my-team {
             }
         }
     }
+    .players {
+        .comboBoxContainer {
+            width: 90%;
+        }
+        .rostercontainer {
+            width: 90%;
+            .roster {
+                font-size: 15px;
+                .styled-table {
+                    th,
+                    td {
+                        padding: 8px 40px 8px 20px;
+                    }
+                    tbody {
+                        .roster_row {
+                            .player_field {
+                                padding-right: 30px;
+                                p {
+                                    margin-left: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 1250px) {
@@ -485,6 +511,29 @@ my-team {
             flex-wrap: nowrap;
             my-game-card {
                 width: 100%;
+            }
+        }
+    }
+    .players {
+        .rostercontainer {
+            .roster {
+                font-size: 14px;
+                .styled-table {
+                    th,
+                    td {
+                        padding: 8px 25px 8px 10px;
+                    }
+                    tbody {
+                        .roster_row {
+                            .player_field {
+                                padding-right: 20px;
+                                p {
+                                    margin-left: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -569,6 +618,36 @@ my-team {
                         h3 {
                             margin: 0px 20px;
                         }
+                    }
+                }
+            }
+        }
+    }
+    .players {
+        .comboBoxContainer {
+            width: 95%;
+        }
+        .rostercontainer {
+            width: 95%;
+            .roster {
+                font-size: 10px;
+                .styled-table {
+                    th,
+                    td {
+                        padding: 8px 10px 8px 4px;
+                    }
+                    tbody {
+                        .roster_row {
+                            .player_field {
+                                padding-right: 10px;
+                                p {
+                                    margin-left: 5px;
+                                }
+                            }
+                        }
+                    }
+                    .hide {
+                        display: none;
                     }
                 }
             }

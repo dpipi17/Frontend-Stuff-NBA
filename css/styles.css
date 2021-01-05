@@ -307,7 +307,6 @@ my-team .team:hover {
         margin: 25px 0;
         font-size: 0.9em;
         font-family: sans-serif;
-        min-width: 400px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); }
         .players .rostercontainer .roster .styled-table thead tr {
           background-color: #c9c9c9;
@@ -369,7 +368,21 @@ my-team .team:hover {
   my-slide .slide img {
     width: 50%; }
   my-slide .slide .text_container p {
-    font-size: 20px; } }
+    font-size: 20px; }
+
+  .players .comboBoxContainer {
+    width: 90%; }
+  .players .rostercontainer {
+    width: 90%; }
+    .players .rostercontainer .roster {
+      font-size: 15px; }
+      .players .rostercontainer .roster .styled-table th,
+      .players .rostercontainer .roster .styled-table td {
+        padding: 8px 40px 8px 20px; }
+      .players .rostercontainer .roster .styled-table tbody .roster_row .player_field {
+        padding-right: 30px; }
+        .players .rostercontainer .roster .styled-table tbody .roster_row .player_field p {
+          margin-left: 10px; } }
 @media screen and (max-width: 1250px) {
   .conference_standing {
     font-size: 15px; }
@@ -381,7 +394,17 @@ my-team .team:hover {
     flex-direction: column;
     flex-wrap: nowrap; }
     .games .gameCards my-game-card {
-      width: 100%; } }
+      width: 100%; }
+
+  .players .rostercontainer .roster {
+    font-size: 14px; }
+    .players .rostercontainer .roster .styled-table th,
+    .players .rostercontainer .roster .styled-table td {
+      padding: 8px 25px 8px 10px; }
+    .players .rostercontainer .roster .styled-table tbody .roster_row .player_field {
+      padding-right: 20px; }
+      .players .rostercontainer .roster .styled-table tbody .roster_row .player_field p {
+        margin-left: 10px; } }
 @media screen and (max-width: 850px) {
   .header label {
     display: block;
@@ -441,6 +464,22 @@ my-team .team:hover {
           height: 50px; }
         .games .gameCards my-game-card .gamecard .cardMiddle h3 {
           margin: 0px 20px; }
+
+  .players .comboBoxContainer {
+    width: 95%; }
+  .players .rostercontainer {
+    width: 95%; }
+    .players .rostercontainer .roster {
+      font-size: 10px; }
+      .players .rostercontainer .roster .styled-table th,
+      .players .rostercontainer .roster .styled-table td {
+        padding: 8px 10px 8px 4px; }
+      .players .rostercontainer .roster .styled-table tbody .roster_row .player_field {
+        padding-right: 10px; }
+        .players .rostercontainer .roster .styled-table tbody .roster_row .player_field p {
+          margin-left: 5px; }
+      .players .rostercontainer .roster .styled-table .hide {
+        display: none; }
 
   .footer {
     flex-direction: column-reverse;
