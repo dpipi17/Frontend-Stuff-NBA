@@ -15,3 +15,14 @@ function handle_resize(breakPoint) {
 
 breakPoint.addListener(handle_resize)
 handle_resize(breakPoint)
+
+
+var navigationItems = document.querySelectorAll('.navigation a');
+var checkbox = document.getElementById('toggle');
+for (let i = 0; i < navigationItems.length; i++) {
+    navigationItems[i].addEventListener('click', () => {
+        if (checkbox.checked) {
+            checkbox.checked = false;
+        }
+    });
+}
