@@ -538,5 +538,17 @@ my-team .team:hover {
       width: 130px; }
       .conference_standing my-team-row .team_name_row img {
         margin: 0px 5px; } }
+@media screen and (max-width: 500px) {
+  .players .rostercontainer {
+    width: 95%; }
+    .players .rostercontainer .roster {
+      font-size: 8px; }
+      .players .rostercontainer .roster .styled-table th,
+      .players .rostercontainer .roster .styled-table td {
+        padding: 8px 6px 8px 2px; }
+      .players .rostercontainer .roster .styled-table tbody .roster_row .player_field {
+        padding-right: 3px; }
+        .players .rostercontainer .roster .styled-table tbody .roster_row .player_field p {
+          margin-left: 3px; } }
 
 /*# sourceMappingURL=styles.css.map */

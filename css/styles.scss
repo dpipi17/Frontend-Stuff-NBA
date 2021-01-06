@@ -743,3 +743,30 @@ my-team {
         }
     }
 }
+
+@media screen and (max-width: 500px) {
+    .players {
+        .rostercontainer {
+            width: 95%;
+            .roster {
+                font-size: 8px;
+                .styled-table {
+                    th,
+                    td {
+                        padding: 8px 6px 8px 2px;
+                    }
+                    tbody {
+                        .roster_row {
+                            .player_field {
+                                padding-right: 3px;
+                                p {
+                                    margin-left: 3px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
