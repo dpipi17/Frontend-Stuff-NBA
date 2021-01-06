@@ -2,15 +2,26 @@ import SlideShow from './slideshow.js'
 import Articles from './articles.js'
 
 export default class HomePage {
+
+    static loadData(callback) {
+        fetch("data/articles.json")
+            .then(response => response.json())
+            .then((json) => {
+                callback(json.articles);
+            })
+    }
+
     static render(callback) {
-        var content = `
-            <div>
-                ${SlideShow.render()}
-                ${Articles.render()}
-            </div>
-        `;
-        callback(content);
-        this.slideShow();
+        this.loadData((articles) => {
+            var content = `
+                <div>
+                    ${SlideShow.render()}
+                    ${Articles.render(articles)}
+                </div>
+            `;
+            callback(content);
+            this.slideShow();
+        });
     }
 
     static slideShow() {
