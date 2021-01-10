@@ -301,6 +301,16 @@ my-team .team:hover {
       align-items: center;
       flex-direction: column;
       width: 100%; }
+      .players .rostercontainer .roster .rosterHeaderContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        text-decoration: none;
+        color: inherit; }
+        .players .rostercontainer .roster .rosterHeaderContainer img {
+          width: 10%;
+          margin-right: 20px; }
       .players .rostercontainer .roster .styled-table {
         border-collapse: collapse;
         margin: 25px 0;

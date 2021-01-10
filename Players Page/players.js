@@ -12,25 +12,23 @@ export default class PlayersPage {
             .then(response => response.json())
 
         Promise.all([teams, roster]).then((values) => {
-            callback(values[0].teams, values[1].sports_content.roster.players.player);
+            callback(values[0].teamsInfo, values[1].sports_content.roster.players.player);
         });
     }
 
     static render(callback, team = "lakers") {
-        this.loadData((teams, roster) => {
-            console.log(teams);
-            console.log(roster);
+        this.loadData((teamsInfo, roster) => {
             let content = `
                 <div class="players">
                     <div class="comboBoxContainer">
                         <my-select-box value="${team}" 
-                                    posibleValues=${encodeURIComponent(JSON.stringify(teams))}
+                                    posibleValues=${encodeURIComponent(JSON.stringify(teamsInfo))}
                                     text="Choose Team"> </my-select-box>
                     </div>
 
 
                     <div class="rostercontainer">
-                        ${Roster.render(roster, team)}
+                        ${Roster.render(roster, teamsInfo[team])}
                     </div>
                 </div>
             `;

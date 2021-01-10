@@ -1,34 +1,124 @@
 {
-    "teams": [
-        "hawks",
-        "celtics",
-        "nets",
-        "hornets",
-        "bulls",
-        "cavaliers",
-        "mavericks",
-        "nuggets",
-        "pistons",
-        "warriors",
-        "rockets",
-        "pacers",
-        "clippers",
-        "lakers",
-        "grizzlies",
-        "heat",
-        "bucks",
-        "timberwolves",
-        "pelicans",
-        "knicks",
-        "thunder",
-        "magic",
-        "sixers",
-        "suns",
-        "blazers",
-        "kings",
-        "spurs",
-        "raptors",
-        "jazz",
-        "wizards"
-    ]
+    "teamsInfo": {
+        "hawks": {
+            "triCode": "ATL",
+            "displayName": "Atlanta Hawks"
+        },
+        "celtics": {
+            "triCode": "BOS",
+            "displayName": "Boston Celtics"
+        },
+        "nets": {
+            "triCode": "BKN",
+            "displayName": "Brooklyn Nets"
+        },
+        "hornets": {
+            "triCode": "CHA",
+            "displayName": "Charlotte Hornets"
+        },
+        "bulls": {
+            "triCode": "CHI",
+            "displayName": "Chicago Bulls"
+        },
+        "cavaliers": {
+            "triCode": "CLE",
+            "displayName": "Cleveland Cavaliers"
+        },
+        "mavericks": {
+            "triCode": "DAL",
+            "displayName": "Dallas Mavericks"
+        },
+        "nuggets": {
+            "triCode": "DEN",
+            "displayName": "Denver Nuggets"
+        },
+        "pistons": {
+            "triCode": "DET",
+            "displayName": "Detroit Pistons"
+        },
+        "warriors": {
+            "triCode": "GSW",
+            "displayName": "Golden State Warriors"
+        },
+        "rockets": {
+            "triCode": "HOU",
+            "displayName": "Houston Rockets"
+        },
+        "pacers": {
+            "triCode": "IND",
+            "displayName": "Indiana Pacers"
+        },
+        "clippers": {
+            "triCode": "LAC",
+            "displayName": "Los Angeles Clippers"
+        },
+        "lakers": {
+            "triCode": "LAL",
+            "displayName": "Los Angeles Lakers"
+        },
+        "grizzlies": {
+            "triCode": "MEM",
+            "displayName": "Memphis Grizzlies"
+        },
+        "heat": {
+            "triCode": "MIA",
+            "displayName": "Miami Heat"
+        },
+        "bucks": {
+            "triCode": "MIL",
+            "displayName": "Milwaukee Bucks"
+        },
+        "timberwolves": {
+            "triCode": "MIN",
+            "displayName": "Minnesota Timberwolves"
+        },
+        "pelicans": {
+            "triCode": "NOP",
+            "displayName": "New Orleans Pelicans"
+        },
+        "knicks": {
+            "triCode": "NYK",
+            "displayName": "New York Knicks"
+        },
+        "thunder": {
+            "triCode": "OKC",
+            "displayName": "Oklahoma City Thunder"
+        },
+        "magic": {
+            "triCode": "ORL",
+            "displayName": "Orlando Magic"
+        },
+        "sixers": {
+            "triCode": "PHI",
+            "displayName": "Philadelphia 76ers"
+        },
+        "suns": {
+            "triCode": "PHX",
+            "displayName": "Phoenix Suns"
+        },
+        "blazers": {
+            "triCode": "POR",
+            "displayName": "Portland Trail Blazers"
+        },
+        "kings": {
+            "triCode": "SAC",
+            "displayName": "Sacramento Kings"
+        },
+        "spurs": {
+            "triCode": "SAS",
+            "displayName": "San Antonio Spurs"
+        },
+        "raptors": {
+            "triCode": "TOR",
+            "displayName": "Toronto Raptors"
+        },
+        "jazz": {
+            "triCode": "UTA",
+            "displayName": "Utah Jazz"
+        },
+        "wizards": {
+            "triCode": "WAS",
+            "displayName": "Washington Wizards"
+        }
+    }
 }

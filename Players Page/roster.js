@@ -1,3 +1,5 @@
+import TeamsPage from './../Teams page/teams.js'
+
 export default class Roster {
 
     static renderHeader() {
@@ -35,10 +37,14 @@ export default class Roster {
         `;
     }
 
-    static render(roster, team) {
+    static render(roster, teamInfo) {
         return `    
           <div class="roster">
-            <h2>${team}</h2>
+
+            <a href="${TeamsPage.teams_page_links[teamInfo.triCode]}" class="rosterHeaderContainer">
+                <img src="${TeamsPage.photo_links[teamInfo.triCode]}"></img>
+                <h2>${teamInfo.displayName}</h2>
+            </a>
             <table class="styled-table">
               ${this.renderHeader()}
 

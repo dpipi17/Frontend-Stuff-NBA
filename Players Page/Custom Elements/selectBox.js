@@ -1,8 +1,10 @@
 export default class SelectBox extends HTMLElement {
 
-    renderOptions(posibleValues) {
-        return posibleValues.map(x => `
-            <option> ${x} </option>
+    renderOptions(teamsInfo) {
+        return Object.keys(teamsInfo).map(key => `
+            <option value="${key}">
+                ${teamsInfo[key].displayName}
+            </option>
         `).join(' ');
     }
 
