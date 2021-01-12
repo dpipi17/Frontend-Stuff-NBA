@@ -22,17 +22,17 @@ export default class Roster {
         return `
                 <tr class="roster_row">
                     <td>
-                        <a href="#/Player/${player.person_id}" class="player_field">
-                            <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/${player.person_id}.png" alt=""></img>
-                            <p>${player.display_name}</p>
+                        <a href="#/Player/${player.personId}" class="player_field">
+                            <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/${player.personId}.png" alt=""></img>
+                            <p>${player.temporaryDisplayName}</p>
                         </a>
                     </td>
-                    <td>${player.jersey_number}</td>
-                    <td>${player.position_short}</td>
-                    <td>${player.height_ft}-${player.height_in}</td>
-                    <td>${player.weight_lbs} lbs</td>
-                    <td class="hide">${player.birth_date.substring(0, 4)}</td>
-                    <td class="hide">${player.elias_country}</td>
+                    <td>${player.jersey}</td>
+                    <td>${player.pos}</td>
+                    <td>${player.heightFeet}-${player.heightInches}</td>
+                    <td>${player.weightPounds} lbs</td>
+                    <td class="hide">${player.dateOfBirthUTC.substring(0, 4)}</td>
+                    <td class="hide">${player.country}</td>
                 </tr>  
         `;
     }

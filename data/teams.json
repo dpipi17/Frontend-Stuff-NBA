@@ -2,123 +2,213 @@
     "teamsInfo": {
         "hawks": {
             "triCode": "ATL",
-            "displayName": "Atlanta Hawks"
+            "displayName": "Atlanta Hawks",
+            "teamId": "1610612737",
+            "primaryColor": "#e21a37",
+            "secondaryColor": "#e21a37"
         },
         "celtics": {
             "triCode": "BOS",
-            "displayName": "Boston Celtics"
+            "displayName": "Boston Celtics",
+            "teamId": "1610612738",
+            "primaryColor": "#00611b",
+            "secondaryColor": "#00611b"
         },
         "nets": {
             "triCode": "BKN",
-            "displayName": "Brooklyn Nets"
+            "displayName": "Brooklyn Nets",
+            "teamId": "1610612751",
+            "primaryColor": "#000000",
+            "secondaryColor": "#000000"
         },
         "hornets": {
             "triCode": "CHA",
-            "displayName": "Charlotte Hornets"
+            "displayName": "Charlotte Hornets",
+            "teamId": "1610612766",
+            "primaryColor": "#00848e",
+            "secondaryColor": "#00848e"
         },
         "bulls": {
             "triCode": "CHI",
-            "displayName": "Chicago Bulls"
+            "displayName": "Chicago Bulls",
+            "teamId": "1610612741",
+            "primaryColor": "#b00203",
+            "secondaryColor": "#b00203"
         },
         "cavaliers": {
             "triCode": "CLE",
-            "displayName": "Cleveland Cavaliers"
+            "displayName": "Cleveland Cavaliers",
+            "teamId": "1610612739",
+            "primaryColor": "#860038",
+            "secondaryColor": "#860038"
         },
         "mavericks": {
             "triCode": "DAL",
-            "displayName": "Dallas Mavericks"
+            "displayName": "Dallas Mavericks",
+            "teamId": "1610612742",
+            "primaryColor": "#006bb6",
+            "secondaryColor": "#006bb6"
         },
         "nuggets": {
             "triCode": "DEN",
-            "displayName": "Denver Nuggets"
+            "displayName": "Denver Nuggets",
+            "teamId": "1610612743",
+            "primaryColor": "#0e2240",
+            "secondaryColor": "#0e2240"
         },
         "pistons": {
             "triCode": "DET",
-            "displayName": "Detroit Pistons"
+            "displayName": "Detroit Pistons",
+            "teamId": "1610612765",
+            "primaryColor": "#fa002c",
+            "secondaryColor": "#fa002c"
         },
         "warriors": {
             "triCode": "GSW",
-            "displayName": "Golden State Warriors"
+            "displayName": "Golden State Warriors",
+            "teamId": "1610612744",
+            "primaryColor": "#003399",
+            "secondaryColor": "#003399"
         },
         "rockets": {
             "triCode": "HOU",
-            "displayName": "Houston Rockets"
+            "displayName": "Houston Rockets",
+            "teamId": "1610612745",
+            "primaryColor": "#cd212b",
+            "secondaryColor": "#cd212b"
         },
         "pacers": {
             "triCode": "IND",
-            "displayName": "Indiana Pacers"
+            "displayName": "Indiana Pacers",
+            "teamId": "1610612754",
+            "primaryColor": "#ffb517",
+            "secondaryColor": "#ffb517"
         },
         "clippers": {
             "triCode": "LAC",
-            "displayName": "Los Angeles Clippers"
+            "displayName": "Los Angeles Clippers",
+            "teamId": "1610612746",
+            "primaryColor": "#ed174b",
+            "secondaryColor": "#ed174b"
         },
         "lakers": {
             "triCode": "LAL",
-            "displayName": "Los Angeles Lakers"
+            "displayName": "Los Angeles Lakers",
+            "teamId": "1610612747",
+            "primaryColor": "#fdba33",
+            "secondaryColor": "#fdba33"
         },
         "grizzlies": {
             "triCode": "MEM",
-            "displayName": "Memphis Grizzlies"
+            "displayName": "Memphis Grizzlies",
+            "teamId": "1610612763",
+            "primaryColor": "#5d76a9",
+            "secondaryColor": "#5d76a9"
         },
         "heat": {
             "triCode": "MIA",
-            "displayName": "Miami Heat"
+            "displayName": "Miami Heat",
+            "teamId": "1610612748",
+            "primaryColor": "#98002e",
+            "secondaryColor": "#98002e"
         },
         "bucks": {
             "triCode": "MIL",
-            "displayName": "Milwaukee Bucks"
+            "displayName": "Milwaukee Bucks",
+            "teamId": "1610612749",
+            "primaryColor": "#00471b",
+            "secondaryColor": "#00471b"
         },
         "timberwolves": {
             "triCode": "MIN",
-            "displayName": "Minnesota Timberwolves"
+            "displayName": "Minnesota Timberwolves",
+            "teamId": "1610612750",
+            "primaryColor": "#2b6291",
+            "secondaryColor": "#2b6291"
         },
         "pelicans": {
             "triCode": "NOP",
-            "displayName": "New Orleans Pelicans"
+            "displayName": "New Orleans Pelicans",
+            "teamId": "1610612740",
+            "primaryColor": "#0c2340",
+            "secondaryColor": "#0c2340"
         },
         "knicks": {
             "triCode": "NYK",
-            "displayName": "New York Knicks"
+            "displayName": "New York Knicks",
+            "teamId": "1610612752",
+            "primaryColor": "#f58426",
+            "secondaryColor": "#f58426"
         },
         "thunder": {
             "triCode": "OKC",
-            "displayName": "Oklahoma City Thunder"
+            "displayName": "Oklahoma City Thunder",
+            "teamId": "1610612760",
+            "primaryColor": "#002d62",
+            "secondaryColor": "#002d62"
         },
         "magic": {
             "triCode": "ORL",
-            "displayName": "Orlando Magic"
+            "displayName": "Orlando Magic",
+            "teamId": "1610612753",
+            "primaryColor": "#0077c0",
+            "secondaryColor": "#0077c0"
         },
         "sixers": {
             "triCode": "PHI",
-            "displayName": "Philadelphia 76ers"
+            "displayName": "Philadelphia 76ers",
+            "teamId": "1610612755",
+            "primaryColor": "#ef0022",
+            "secondaryColor": "#ef0022"
         },
         "suns": {
             "triCode": "PHX",
-            "displayName": "Phoenix Suns"
+            "displayName": "Phoenix Suns",
+            "teamId": "1610612756",
+            "primaryColor": "#e76221",
+            "secondaryColor": "#e76221"
         },
         "blazers": {
             "triCode": "POR",
-            "displayName": "Portland Trail Blazers"
+            "displayName": "Portland Trail Blazers",
+            "teamId": "1610612757",
+            "primaryColor": "#cc0000",
+            "secondaryColor": "#cc0000"
         },
         "kings": {
             "triCode": "SAC",
-            "displayName": "Sacramento Kings"
+            "displayName": "Sacramento Kings",
+            "teamId": "1610612758",
+            "primaryColor": "#51388a",
+            "secondaryColor": "#51388a"
         },
         "spurs": {
             "triCode": "SAS",
-            "displayName": "San Antonio Spurs"
+            "displayName": "San Antonio Spurs",
+            "teamId": "1610612759",
+            "primaryColor": "#959191",
+            "secondaryColor": "#959191"
         },
         "raptors": {
             "triCode": "TOR",
-            "displayName": "Toronto Raptors"
+            "displayName": "Toronto Raptors",
+            "teamId": "1610612761",
+            "primaryColor": "#bd1b21",
+            "secondaryColor": "#bd1b21"
         },
         "jazz": {
             "triCode": "UTA",
-            "displayName": "Utah Jazz"
+            "displayName": "Utah Jazz",
+            "teamId": "1610612762",
+            "primaryColor": "#f9a11e",
+            "secondaryColor": "#f9a11e"
         },
         "wizards": {
             "triCode": "WAS",
-            "displayName": "Washington Wizards"
+            "displayName": "Washington Wizards",
+            "teamId": "1610612764",
+            "primaryColor": "#cf142b",
+            "secondaryColor": "#cf142b"
         }
     }
 }

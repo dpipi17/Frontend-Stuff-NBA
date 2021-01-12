@@ -6,18 +6,17 @@ export default class PlayersPage {
     static loadData(callback, team) {
         var teams = fetch('data/teams.json')
             .then(response => response.json());
-        var roster = fetch("https://data.nba.net/json/cms/noseason/team/" + team + "/roster.json", {
-                "method": "GET"
-            })
-            .then(response => response.json())
+        var players = fetch('http://data.nba.net/prod/v1/2020/players.json')
+            .then(response => response.json());
 
-        Promise.all([teams, roster]).then((values) => {
-            callback(values[0].teamsInfo, values[1].sports_content.roster.players.player);
+        Promise.all([teams, players]).then((values) => {
+            callback(values[0].teamsInfo, values[1].league.standard);
         });
     }
 
     static render(callback, team = "lakers") {
-        this.loadData((teamsInfo, roster) => {
+        this.loadData((teamsInfo, players) => {
+            let roster = players.filter(player => player.teamId == teamsInfo[team].teamId)
             let content = `
                 <div class="players">
                     <div class="comboBoxContainer">

@@ -345,6 +345,13 @@ my-team .team:hover {
         .players .rostercontainer .roster .styled-table tbody .roster_row:hover {
           background-color: rgba(1, 154, 255, 0.15); }
 
+.player {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .player img {
+    width: 30%; }
+
 .footer {
   display: flex;
   justify-content: space-around;

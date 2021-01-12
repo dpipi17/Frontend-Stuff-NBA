@@ -3,6 +3,7 @@ import TeamsPage from './../Teams page/teams.js'
 import StandingPage from './../Standing Page/standing.js'
 import GamesPage from './../Games Page/games.js'
 import PlayersPage from './../Players Page/players.js'
+import PlayerPage from './../Player Page/player.js'
 
 let routes = {
     '*': () => {
@@ -30,8 +31,7 @@ let routes = {
         PlayersPage.render(updateMainContainer, params.team);
     },
     '/Player/:playerId': (params) => {
-        //todo
-        alert(params.playerId);
+        PlayerPage.render(updateMainContainer, params.playerId);
     },
     '/Fantasy': () => {
         updateMainContainer('<h1>Fantasy</h1>');
