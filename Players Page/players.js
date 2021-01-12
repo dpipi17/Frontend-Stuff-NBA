@@ -6,7 +6,7 @@ export default class PlayersPage {
     static loadData(callback, team) {
         var teams = fetch('data/teams.json')
             .then(response => response.json());
-        var players = fetch('http://data.nba.net/prod/v1/2020/players.json')
+        var players = fetch('https://data.nba.net/prod/v1/2020/players.json')
             .then(response => response.json());
 
         Promise.all([teams, players]).then((values) => {
