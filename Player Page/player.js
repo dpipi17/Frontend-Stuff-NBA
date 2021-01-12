@@ -13,7 +13,7 @@ export default class PlayerPage {
         var teamsInfo = fetch('data/teams.json')
             .then(response => response.json());
 
-        var playerProfile = fetch("http://data.nba.net/prod/v1/2020/players/" + playerId + "_profile.json", {
+        var playerProfile = fetch("https://data.nba.net/prod/v1/2020/players/" + playerId + "_profile.json", {
                 "method": "GET"
             })
             .then(response => response.json())
