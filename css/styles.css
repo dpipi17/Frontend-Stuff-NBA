@@ -349,8 +349,51 @@ my-team .team:hover {
   display: flex;
   justify-content: center;
   align-items: center; }
-  .player img {
-    width: 30%; }
+  .player .top_part {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .player .top_part .profile_container {
+      margin-top: 50px;
+      display: flex;
+      align-items: stretch; }
+      .player .top_part .profile_container .imgs_container {
+        display: flex;
+        width: 50%;
+        justify-content: flex-end; }
+        .player .top_part .profile_container .imgs_container .team_logo {
+          width: 20%; }
+        .player .top_part .profile_container .imgs_container .profile_img {
+          width: 60%; }
+      .player .top_part .profile_container .profile_info_container {
+        margin-left: 50px;
+        width: 50%;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column; }
+        .player .top_part .profile_container .profile_info_container .name {
+          display: flex;
+          flex-direction: column;
+          font-weight: bold;
+          font-size: 40px;
+          font-family: Arial, sans-serif;
+          font-weight: 700; }
+        .player .top_part .profile_container .profile_info_container .btn {
+          margin-top: 40px;
+          margin-bottom: 20px;
+          width: 30%;
+          background-color: rgba(5, 28, 45, 0.95);
+          border: none;
+          outline: none;
+          height: 40px;
+          border-radius: 50px;
+          color: #fff;
+          font-weight: 600;
+          cursor: pointer;
+          transition: 0.5s; }
+        .player .top_part .profile_container .profile_info_container .btn:hover {
+          background-color: #4d84e2; }
 
 .footer {
   display: flex;
@@ -540,6 +583,24 @@ my-team .team:hover {
       .players .rostercontainer .roster .styled-table .hide {
         display: none; }
 
+  .player .top_part .profile_container .imgs_container {
+    width: 60%; }
+    .player .top_part .profile_container .imgs_container .team_logo {
+      width: 20%; }
+    .player .top_part .profile_container .imgs_container .profile_img {
+      width: 70%; }
+  .player .top_part .profile_container .profile_info_container {
+    margin-left: 10px; }
+    .player .top_part .profile_container .profile_info_container p {
+      font-size: 12px; }
+    .player .top_part .profile_container .profile_info_container .name {
+      font-size: 20px;
+      font-weight: 700; }
+    .player .top_part .profile_container .profile_info_container .btn {
+      margin-top: 30px;
+      margin-bottom: 21px;
+      font-size: 10px; }
+
   .footer {
     flex-direction: column-reverse;
     justify-content: center;
@@ -566,6 +627,28 @@ my-team .team:hover {
       .players .rostercontainer .roster .styled-table tbody .roster_row .player_field {
         padding-right: 3px; }
         .players .rostercontainer .roster .styled-table tbody .roster_row .player_field p {
-          margin-left: 3px; } }
+          margin-left: 3px; }
+
+  .player .top_part .profile_container {
+    margin-top: 20px; }
+    .player .top_part .profile_container .imgs_container {
+      width: 60%; }
+      .player .top_part .profile_container .imgs_container .team_logo {
+        width: 20%; }
+      .player .top_part .profile_container .imgs_container .profile_img {
+        width: 70%; }
+    .player .top_part .profile_container .profile_info_container {
+      margin-left: 5px;
+      width: 40%; }
+      .player .top_part .profile_container .profile_info_container p {
+        font-size: 8px; }
+      .player .top_part .profile_container .profile_info_container .name {
+        font-size: 15px;
+        font-weight: 700; }
+      .player .top_part .profile_container .profile_info_container .btn {
+        height: 30px;
+        width: 50%;
+        border-radius: 30px;
+        font-size: 6px; } }
 
 /*# sourceMappingURL=styles.css.map */

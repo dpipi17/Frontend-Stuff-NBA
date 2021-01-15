@@ -438,8 +438,59 @@ my-team {
     display: flex;
     justify-content: center;
     align-items: center;
-    img {
-        width: 30%;
+    .top_part {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .profile_container {
+            margin-top: 50px;
+            display: flex;
+            align-items: stretch;
+            .imgs_container {
+                display: flex;
+                width: 50%;
+                justify-content: flex-end;
+                .team_logo {
+                    width: 20%;
+                }
+                .profile_img {
+                    width: 60%;
+                }
+            }
+            .profile_info_container {
+                margin-left: 50px;
+                width: 50%;
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: column;
+                .name {
+                    display: flex;
+                    flex-direction: column;
+                    font-weight: bold;
+                    font-size: 40px;
+                    font-family: Arial, sans-serif;
+                    font-weight: 700;
+                }
+                .btn {
+                    margin-top: 40px;
+                    margin-bottom: 20px;
+                    width: 30%;
+                    background-color: $base-blue;
+                    border: none;
+                    outline: none;
+                    height: 40px;
+                    border-radius: 50px;
+                    color: #fff;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: 0.5s;
+                }
+                .btn:hover {
+                    background-color: #4d84e2;
+                }
+            }
+        }
     }
 }
 
@@ -742,6 +793,36 @@ my-team {
             }
         }
     }
+    .player {
+        .top_part {
+            .profile_container {
+                .imgs_container {
+                    width: 60%;
+                    .team_logo {
+                        width: 20%;
+                    }
+                    .profile_img {
+                        width: 70%;
+                    }
+                }
+                .profile_info_container {
+                    margin-left: 10px;
+                    p {
+                        font-size: 12px;
+                    }
+                    .name {
+                        font-size: 20px;
+                        font-weight: 700;
+                    }
+                    .btn {
+                        margin-top: 30px;
+                        margin-bottom: 21px;
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
     .footer {
         flex-direction: column-reverse;
         justify-content: center;
@@ -785,6 +866,39 @@ my-team {
                                 }
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+    .player {
+        .top_part {
+            .profile_container {
+                margin-top: 20px;
+                .imgs_container {
+                    width: 60%;
+                    .team_logo {
+                        width: 20%;
+                    }
+                    .profile_img {
+                        width: 70%;
+                    }
+                }
+                .profile_info_container {
+                    margin-left: 5px;
+                    width: 40%;
+                    p {
+                        font-size: 8px;
+                    }
+                    .name {
+                        font-size: 15px;
+                        font-weight: 700;
+                    }
+                    .btn {
+                        height: 30px;
+                        width: 50%;
+                        border-radius: 30px;
+                        font-size: 6px;
                     }
                 }
             }
