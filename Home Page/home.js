@@ -4,18 +4,21 @@ import Articles from './articles.js'
 export default class HomePage {
 
     static loadData(callback) {
-        fetch("data/articles.json")
-            .then(response => response.json())
-            .then((json) => {
-                callback(json.articles);
-            })
+        var articles = fetch("data/articles.json")
+            .then(response => response.json());
+        var news = fetch("data/news.json")
+            .then(response => response.json());
+
+        Promise.all([articles, news]).then((values) => {
+            callback(values[0].articles, values[1]);
+        });
     }
 
     static render(callback) {
-        this.loadData((articles) => {
+        this.loadData((articles, news) => {
             var content = `
                 <div>
-                    ${SlideShow.render()}
+                    ${SlideShow.render(news)}
                     ${Articles.render(articles)}
                 </div>
             `;
