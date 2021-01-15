@@ -33,8 +33,8 @@ let routes = {
     '/Player/:playerId': (params) => {
         PlayerPage.render(updateMainContainer, params.playerId);
     },
-    '/Fantasy': () => {
-        updateMainContainer('<h1>Fantasy</h1>');
+    '/Compare': () => {
+        updateMainContainer('<h1>Compare</h1>');
     },
 
 };
