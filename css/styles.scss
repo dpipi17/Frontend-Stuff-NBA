@@ -439,10 +439,12 @@ my-team {
     justify-content: center;
     align-items: center;
     .top_part {
+        color: $base-white;
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         .profile_container {
             margin-top: 50px;
             display: flex;
@@ -488,6 +490,44 @@ my-team {
                 }
                 .btn:hover {
                     background-color: #4d84e2;
+                }
+            }
+        }
+        .top_stats {
+            display: flex;
+            width: 100%;
+            backdrop-filter: blur(1000px);
+            backdrop-filter: brightness(50%);
+            border: 1px solid $base-white;
+            font-weight: 600;
+            font-size: 15px;
+            text-align: center;
+            flex-direction: column;
+            justify-content: center;
+            .main_stats {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-bottom: 1px solid $base-white;
+                .main_stat {
+                    padding: 30px 50px;
+                    border-left: 1px solid $base-white;
+                }
+                .last_main_stat {
+                    border-right: 1px solid $base-white;
+                }
+            }
+            .infos {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-bottom: 1px solid $base-white;
+                .info {
+                    padding: 30px 30px;
+                    border-left: 1px solid $base-white;
+                }
+                .last_info {
+                    border-right: 1px solid $base-white;
                 }
             }
         }

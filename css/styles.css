@@ -350,10 +350,12 @@ my-team .team:hover {
   justify-content: center;
   align-items: center; }
   .player .top_part {
+    color: rgba(255, 255, 255, 0.95);
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    flex-direction: column; }
     .player .top_part .profile_container {
       margin-top: 50px;
       display: flex;
@@ -394,6 +396,37 @@ my-team .team:hover {
           transition: 0.5s; }
         .player .top_part .profile_container .profile_info_container .btn:hover {
           background-color: #4d84e2; }
+    .player .top_part .top_stats {
+      display: flex;
+      width: 100%;
+      backdrop-filter: blur(1000px);
+      backdrop-filter: brightness(50%);
+      border: 1px solid rgba(255, 255, 255, 0.95);
+      font-weight: 600;
+      font-size: 15px;
+      text-align: center;
+      flex-direction: column;
+      justify-content: center; }
+      .player .top_part .top_stats .main_stats {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.95); }
+        .player .top_part .top_stats .main_stats .main_stat {
+          padding: 30px 50px;
+          border-left: 1px solid rgba(255, 255, 255, 0.95); }
+        .player .top_part .top_stats .main_stats .last_main_stat {
+          border-right: 1px solid rgba(255, 255, 255, 0.95); }
+      .player .top_part .top_stats .infos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.95); }
+        .player .top_part .top_stats .infos .info {
+          padding: 30px 30px;
+          border-left: 1px solid rgba(255, 255, 255, 0.95); }
+        .player .top_part .top_stats .infos .last_info {
+          border-right: 1px solid rgba(255, 255, 255, 0.95); }
 
 .footer {
   display: flex;
