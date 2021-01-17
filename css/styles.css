@@ -435,6 +435,35 @@ my-team .team:hover {
           border-left: 1px solid rgba(255, 255, 255, 0.95);
           border-right: 1px solid rgba(255, 255, 255, 0.95); }
 
+.compare {
+  display: flex;
+  width: 60%;
+  margin: 100px auto;
+  justify-content: space-between; }
+  .compare my-players-search-bar {
+    display: flex;
+    flex-direction: column; }
+    .compare my-players-search-bar .search_players_container {
+      position: absolute;
+      display: flex;
+      flex-wrap: wrap;
+      display: none;
+      width: 750px;
+      margin-top: 25px;
+      background-color: rgba(255, 255, 255, 0.95); }
+      .compare my-players-search-bar .search_players_container .search_player_card {
+        display: flex;
+        align-items: center;
+        width: 250px;
+        text-decoration: none;
+        color: inherit; }
+        .compare my-players-search-bar .search_players_container .search_player_card img {
+          width: 80px;
+          height: 80px;
+          object-fit: contain; }
+        .compare my-players-search-bar .search_players_container .search_player_card p {
+          margin-left: 10px; }
+
 .footer {
   display: flex;
   justify-content: space-around;

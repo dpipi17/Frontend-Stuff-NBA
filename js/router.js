@@ -4,6 +4,7 @@ import StandingPage from './../Standing Page/standing.js'
 import GamesPage from './../Games Page/games.js'
 import PlayersPage from './../Players Page/players.js'
 import PlayerPage from './../Player Page/player.js'
+import ComparePage from './../Compare Page/compare.js'
 
 let routes = {
     '*': () => {
@@ -34,7 +35,7 @@ let routes = {
         PlayerPage.render(updateMainContainer, params.playerId);
     },
     '/Compare': () => {
-        updateMainContainer('<h1>Compare</h1>');
+        ComparePage.render(updateMainContainer)
     },
 
 };
