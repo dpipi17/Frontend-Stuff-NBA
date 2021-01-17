@@ -543,35 +543,57 @@ my-team {
 
 .compare {
     display: flex;
-    width: 60%;
+    width: 80%;
     margin: 100px auto;
-    justify-content: space-between;
-    my-players-search-bar {
+    justify-content: space-evenly;
+    .compare_top_part {
+        width: 100%;
         display: flex;
-        flex-direction: column;
-        .search_players_container {
-            position: absolute;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 20px 10px;
+        background-color: $base-white;
+        .chosen_player {
             display: flex;
-            flex-wrap: wrap;
-            display: none;
-            width: 750px;
-            margin-top: 25px;
-            background-color: $base-white;
-            .search_player_card {
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            img {
+                width: 200px;
+                margin-bottom: 10px;
+            }
+            my-players-search-bar {
                 display: flex;
-                align-items: center;
-                width: 250px;
-                text-decoration: none;
-                color: inherit;
-                img {
-                    width: 80px;
-                    height: 80px;
-                    object-fit: contain;
-                }
-                p {
-                    margin-left: 10px;
+                flex-direction: column;
+                .search_players_container {
+                    position: absolute;
+                    display: flex;
+                    flex-wrap: wrap;
+                    display: none;
+                    width: 750px;
+                    margin-top: 25px;
+                    background-color: $base-white;
+                    .search_player_card {
+                        display: flex;
+                        align-items: center;
+                        width: 250px;
+                        text-decoration: none;
+                        color: inherit;
+                        img {
+                            width: 80px;
+                            height: 80px;
+                            object-fit: contain;
+                        }
+                        p {
+                            margin-left: 10px;
+                        }
+                    }
                 }
             }
+        }
+        .vs {
+            width: 150px;
+            align-content: center;
         }
     }
 }
