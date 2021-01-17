@@ -523,8 +523,6 @@ my-team {
                 .main_stat {
                     padding: 30px 50px;
                     border-left: 1px solid $base-white;
-                }
-                .last_main_stat {
                     border-right: 1px solid $base-white;
                 }
             }
@@ -536,8 +534,6 @@ my-team {
                 .info {
                     padding: 30px 30px;
                     border-left: 1px solid $base-white;
-                }
-                .last_info {
                     border-right: 1px solid $base-white;
                 }
             }
@@ -639,6 +635,18 @@ my-team {
     }
 }
 
+@media screen and (max-width: 1450px) {
+    .player {
+        .top_part {
+            .top_stats {
+                .hide {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 1250px) {
     .articles {
         my-article {
@@ -698,6 +706,24 @@ my-team {
             }
         }
     }
+    .player {
+        .top_part {
+            .top_stats {
+                font-weight: 600;
+                font-size: 14px;
+                .main_stats {
+                    .main_stat {
+                        padding: 25px 30px;
+                    }
+                }
+                .infos {
+                    .info {
+                        padding: 20px 30px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 1150px) {
@@ -715,6 +741,24 @@ my-team {
                     p {
                         padding: 0px 20px;
                         font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    .player {
+        .top_part {
+            .top_stats {
+                font-weight: 600;
+                font-size: 14px;
+                .main_stats {
+                    .main_stat {
+                        padding: 20px 25px;
+                    }
+                }
+                .infos {
+                    .info {
+                        padding: 20px 25px;
                     }
                 }
             }
@@ -873,6 +917,23 @@ my-team {
                     }
                 }
             }
+            .top_stats {
+                font-weight: 600;
+                font-size: 12px;
+                .main_stats {
+                    .main_stat {
+                        padding: 15px 20px;
+                    }
+                }
+                .infos {
+                    .info {
+                        padding: 15px 15px;
+                    }
+                }
+                .hide_second {
+                    display: none;
+                }
+            }
         }
     }
     .footer {
@@ -952,6 +1013,24 @@ my-team {
                         border-radius: 30px;
                         font-size: 6px;
                     }
+                }
+            }
+            .top_stats {
+                font-weight: 550;
+                font-size: 10px;
+                .main_stats {
+                    .main_stat {
+                        padding: 15px 10px;
+                    }
+                }
+                .infos {
+                    font-size: 8px;
+                    .info {
+                        padding: 20px 8px;
+                    }
+                }
+                .hide_second {
+                    display: none;
                 }
             }
         }

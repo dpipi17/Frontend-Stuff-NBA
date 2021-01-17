@@ -72,7 +72,7 @@ export default class PlayerPage {
                         <br>
                         ${playerStats.latest.spg}
                     </div>
-                    <div class="main_stat last_main_stat">
+                    <div class="main_stat">
                         BPG
                         <br>
                         ${playerStats.latest.bpg}
@@ -95,7 +95,7 @@ export default class PlayerPage {
                         <br>
                         ${playerProfile.country}
                     </div>
-                    <div class="info">
+                    <div class="info hide">
                         LAST ATTENDED
                         <br>
                         ${playerProfile.lastAffiliation}
@@ -105,12 +105,12 @@ export default class PlayerPage {
                         <br>
                         ${playerProfile.collegeName}
                     </div>
-                    <div class="info">
+                    <div class="info hide">
                         DRAFT 
                         <br>
                         ${playerProfile.draft.seasonYear} R${playerProfile.draft.roundNum} Pick ${playerProfile.draft.pickNum}
                     </div>
-                    <div class="info last_info">
+                    <div class="info hide_second">
                         EXPERIENCE 
                         <br>
                         ${playerProfile.yearsPro} Years

@@ -423,8 +423,7 @@ my-team .team:hover {
         border-bottom: 1px solid rgba(255, 255, 255, 0.95); }
         .player .top_part .top_stats .main_stats .main_stat {
           padding: 30px 50px;
-          border-left: 1px solid rgba(255, 255, 255, 0.95); }
-        .player .top_part .top_stats .main_stats .last_main_stat {
+          border-left: 1px solid rgba(255, 255, 255, 0.95);
           border-right: 1px solid rgba(255, 255, 255, 0.95); }
       .player .top_part .top_stats .infos {
         display: flex;
@@ -433,8 +432,7 @@ my-team .team:hover {
         border-bottom: 1px solid rgba(255, 255, 255, 0.95); }
         .player .top_part .top_stats .infos .info {
           padding: 30px 30px;
-          border-left: 1px solid rgba(255, 255, 255, 0.95); }
-        .player .top_part .top_stats .infos .last_info {
+          border-left: 1px solid rgba(255, 255, 255, 0.95);
           border-right: 1px solid rgba(255, 255, 255, 0.95); }
 
 .footer {
@@ -497,6 +495,9 @@ my-team .team:hover {
         padding-right: 30px; }
         .players .rostercontainer .roster .styled-table tbody .roster_row .player_field p {
           margin-left: 10px; } }
+@media screen and (max-width: 1450px) {
+  .player .top_part .top_stats .hide {
+    display: none; } }
 @media screen and (max-width: 1250px) {
   .articles my-article .article {
     width: 550px;
@@ -530,7 +531,15 @@ my-team .team:hover {
     .players .rostercontainer .roster .styled-table tbody .roster_row .player_field {
       padding-right: 20px; }
       .players .rostercontainer .roster .styled-table tbody .roster_row .player_field p {
-        margin-left: 10px; } }
+        margin-left: 10px; }
+
+  .player .top_part .top_stats {
+    font-weight: 600;
+    font-size: 14px; }
+    .player .top_part .top_stats .main_stats .main_stat {
+      padding: 25px 30px; }
+    .player .top_part .top_stats .infos .info {
+      padding: 20px 30px; } }
 @media screen and (max-width: 1150px) {
   .articles my-article .article {
     width: 400px;
@@ -542,7 +551,15 @@ my-team .team:hover {
       padding: 0px 10px; }
       .articles my-article .article .text_container p {
         padding: 0px 20px;
-        font-size: 14px; } }
+        font-size: 14px; }
+
+  .player .top_part .top_stats {
+    font-weight: 600;
+    font-size: 14px; }
+    .player .top_part .top_stats .main_stats .main_stat {
+      padding: 20px 25px; }
+    .player .top_part .top_stats .infos .info {
+      padding: 20px 25px; } }
 @media screen and (max-width: 850px) {
   .header label {
     display: block;
@@ -643,6 +660,15 @@ my-team .team:hover {
       margin-top: 30px;
       margin-bottom: 21px;
       font-size: 10px; }
+  .player .top_part .top_stats {
+    font-weight: 600;
+    font-size: 12px; }
+    .player .top_part .top_stats .main_stats .main_stat {
+      padding: 15px 20px; }
+    .player .top_part .top_stats .infos .info {
+      padding: 15px 15px; }
+    .player .top_part .top_stats .hide_second {
+      display: none; }
 
   .footer {
     flex-direction: column-reverse;
@@ -692,6 +718,17 @@ my-team .team:hover {
         height: 30px;
         width: 50%;
         border-radius: 30px;
-        font-size: 6px; } }
+        font-size: 6px; }
+  .player .top_part .top_stats {
+    font-weight: 550;
+    font-size: 10px; }
+    .player .top_part .top_stats .main_stats .main_stat {
+      padding: 15px 10px; }
+    .player .top_part .top_stats .infos {
+      font-size: 8px; }
+      .player .top_part .top_stats .infos .info {
+        padding: 20px 8px; }
+    .player .top_part .top_stats .hide_second {
+      display: none; } }
 
 /*# sourceMappingURL=styles.css.map */
