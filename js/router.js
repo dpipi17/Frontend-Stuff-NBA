@@ -35,8 +35,13 @@ let routes = {
         PlayerPage.render(updateMainContainer, params.playerId);
     },
     '/Compare': () => {
-        ComparePage.render(updateMainContainer)
+        let comparePage = new ComparePage();
+        comparePage.render(updateMainContainer)
     },
+    '/Compare/:firstPlayerId/:secondPlayerId': (params) => {
+        let comparePage = new ComparePage(params.firstPlayerId, params.secondPlayerId);
+        comparePage.render(updateMainContainer, params.firstPlayerId, params.secondPlayerId)
+    }
 
 };
 

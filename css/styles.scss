@@ -544,7 +544,7 @@ my-team {
 .compare {
     display: flex;
     width: 80%;
-    margin: 100px auto;
+    margin: 50px auto;
     justify-content: space-evenly;
     .compare_top_part {
         width: 100%;
@@ -577,8 +577,6 @@ my-team {
                         display: flex;
                         align-items: center;
                         width: 250px;
-                        text-decoration: none;
-                        color: inherit;
                         img {
                             width: 80px;
                             height: 80px;

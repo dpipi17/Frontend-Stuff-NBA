@@ -438,7 +438,7 @@ my-team .team:hover {
 .compare {
   display: flex;
   width: 80%;
-  margin: 100px auto;
+  margin: 50px auto;
   justify-content: space-evenly; }
   .compare .compare_top_part {
     width: 100%;
@@ -469,9 +469,7 @@ my-team .team:hover {
           .compare .compare_top_part .chosen_player my-players-search-bar .search_players_container .search_player_card {
             display: flex;
             align-items: center;
-            width: 250px;
-            text-decoration: none;
-            color: inherit; }
+            width: 250px; }
             .compare .compare_top_part .chosen_player my-players-search-bar .search_players_container .search_player_card img {
               width: 80px;
               height: 80px;

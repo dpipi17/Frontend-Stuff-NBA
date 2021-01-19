@@ -1,8 +1,14 @@
 import PlayersSearchBar from './Custom Elements/playersSearchBar.js'
+import Utils from './../js/utils.js'
 
 export default class ComparePage {
 
-    static loadData(callback) {
+    constructor(firstPlayerId, secondPlayerId) {
+        this.firstPlayerId = firstPlayerId;
+        this.secondPlayerId = secondPlayerId;
+    }
+
+    loadData(callback) {
         var players = fetch('data/players.json')
             .then(response => response.json());
 
@@ -11,35 +17,74 @@ export default class ComparePage {
         });
     }
 
-    static render(callback) {
+    playerWithSearch(id, players, alignItems, placeHolder, playerId) {
+        return `
+            <img src="${Utils.getPlayerImageSrc(playerId)}"></img>
+            <my-players-search-bar id="${id}"
+                players="${encodeURIComponent(JSON.stringify(players))}"
+                alignItems="${alignItems}"
+                placeHolder="${placeHolder}"
+                defaultPlayerId="${playerId}">
+            </my-players-search-bar>
+        `;
+    }
+
+    onPlayerChoos() {
+        if (this.firstPlayerId && this.secondPlayerId) {
+            window.location = '#/Compare/' + this.firstPlayerId + "/" + this.secondPlayerId;
+        }
+    }
+
+
+    addListeners() {
+        var leftPlayerImg = document.querySelector(".compare_top_part .left img");
+        var leftSeaBar = document.getElementById("left_search_bar");
+        leftSeaBar.addEventListener("playerChoose", (e) => {
+            this.firstPlayerId = e.detail.personId;
+            leftPlayerImg.src = Utils.getPlayerImageSrc(this.firstPlayerId);
+            this.onPlayerChoos();
+        });
+
+
+        var rightPlayerImg = document.querySelector(".compare_top_part .right img");
+        var rightSeaBar = document.getElementById("right_search_bar");
+        rightSeaBar.addEventListener("playerChoose", (e) => {
+            this.secondPlayerId = e.detail.personId;
+            rightPlayerImg.src = Utils.getPlayerImageSrc(this.secondPlayerId);
+            this.onPlayerChoos();
+        });
+    }
+
+    renderTopPart(players) {
+        return `
+            <div class="chosen_player left">
+                ${this.playerWithSearch("left_search_bar", players, "flex-start", "Search first player...", this.firstPlayerId)}
+            </div>
+
+            <img class="vs" src="https://www.pngkey.com/png/full/20-208774_torrent-vs-magnet-link-graphic-design.png"></img>
+
+            <div class="chosen_player right">
+                ${this.playerWithSearch("right_search_bar", players, "flex-end", "Search second player...", this.secondPlayerId)}
+            </div>
+        `;
+    }
+
+    render(callback) {
         this.loadData((players) => {
+            this.firstPlayer = players.find(player => player.personId == this.firstPlayerId);
+            this.secondPlayer = players.find(player => player.personId == this.secondPlayerId);
+
             let content = `
                 <div class="compare">
                     <div class="compare_top_part">
-                        <div class="chosen_player">
-                            <img src="https://w7.pngwing.com/pngs/841/727/png-transparent-computer-icons-user-profile-synonyms-and-antonyms-android-android-computer-wallpaper-monochrome-sphere.png"></img>
-                            <my-players-search-bar id="left_search_bar"
-                                                players="${encodeURIComponent(JSON.stringify(players))}"
-                                                alignItems="flex-start"
-                                                placeHolder="Search first player...">
-                            </my-players-search-bar>
-                        </div>
-
-                        <img class="vs" src="https://www.pngkey.com/png/full/20-208774_torrent-vs-magnet-link-graphic-design.png"></img>
-
-                        <div class="chosen_player">
-                            <img src="https://w7.pngwing.com/pngs/841/727/png-transparent-computer-icons-user-profile-synonyms-and-antonyms-android-android-computer-wallpaper-monochrome-sphere.png"></img>
-                            <my-players-search-bar id="right_search_bar"
-                                                players="${encodeURIComponent(JSON.stringify(players))}"
-                                                alignItems="flex-end"
-                                                placeHolder="Search second player...">
-                            </my-players-search-bar>
-                        </div>
+                        ${this.renderTopPart(players)}
                     </div>
 
                 </div>
             `;
             callback(content);
+
+            this.addListeners();
         });
     }
 }

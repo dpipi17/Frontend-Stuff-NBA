@@ -1,9 +1,15 @@
 export default class PlayersSearchBar extends HTMLElement {
 
     createPlayerElement(player) {
-        var anchor = document.createElement("a");
-        anchor.href = "#/Player/" + player.personId;
-        anchor.className = "search_player_card";
+        var containerDiv = document.createElement("div");
+        containerDiv.className = "search_player_card";
+        containerDiv.addEventListener("click", () => {
+            this.searchBar.value = player.firstName + " " + player.lastName;
+            this.playersContainer.style.display = 'none';
+            this.dispatchEvent(new CustomEvent("playerChoose", {
+                detail: player
+            }));
+        })
 
         var image = document.createElement("img");
         image.src = "https://cdn.nba.com/headshots/nba/latest/1040x760/" + player.personId + ".png"
@@ -11,10 +17,10 @@ export default class PlayersSearchBar extends HTMLElement {
         var name = document.createElement("p");
         name.innerHTML = player.firstName + " " + player.lastName;
 
-        anchor.appendChild(image);
-        anchor.appendChild(name);
+        containerDiv.appendChild(image);
+        containerDiv.appendChild(name);
 
-        return anchor;
+        return containerDiv;
     }
 
     onQueryUpdate(query) {
@@ -34,7 +40,7 @@ export default class PlayersSearchBar extends HTMLElement {
         }
 
 
-        for (let i = 0; i < this.filteredPlayers.length && i < 10; i++) {
+        for (let i = 0; i < this.filteredPlayers.length && i < 9; i++) {
             var player = this.filteredPlayers[i];
             this.playersContainer.appendChild(this.createPlayerElement(player));
         }
@@ -77,6 +83,8 @@ export default class PlayersSearchBar extends HTMLElement {
 
         this.playersContainer = document.getElementById(this.playersContainerId);
         this.searchBar = document.getElementById(this.inputId);
+        let defaultPlayer = this.players.find(player => player.personId == this.getAttribute("defaultPlayerId"));
+        this.searchBar.value = defaultPlayer ? defaultPlayer.firstName + " " + defaultPlayer.lastName : "";
         this.filteredPlayers = [];
 
         this.addListeners();
