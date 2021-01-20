@@ -543,11 +543,11 @@ my-team {
 
 .compare {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 80%;
     margin: 50px auto;
-    justify-content: space-evenly;
     .compare_top_part {
-        width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -592,6 +592,50 @@ my-team {
         .vs {
             width: 150px;
             align-content: center;
+        }
+    }
+    .two_columns_compare_container {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        padding: 20px 20px 10px;
+        background-color: $base-white;
+        table {
+            width: 100%;
+            // background: #eee;
+            border-collapse: separate;
+            border-spacing: 0 10px;
+            padding: 1em;
+            margin: 1em auto;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            th {
+                font-size: 1.2em;
+            }
+            td {
+                font-weight: bold;
+                border-bottom: 1px solid #fbfbfb;
+                width: 20%;
+                padding: .5em .25em;
+                background-size: 0% 100%;
+                background-repeat: no-repeat;
+                -webkit-transition: all .75s ease-out;
+                -moz-transition: all .75s ease-out;
+                transition: all .75s ease-out;
+            }
+            td:nth-child(1) {
+                width: 40%;
+                text-align: left;
+                background-position: right top;
+            }
+            td:nth-child(2) {
+                text-align: center;
+            }
+            td:nth-child(3) {
+                width: 40%;
+                text-align: right;
+                background-position: left top;
+            }
         }
     }
 }

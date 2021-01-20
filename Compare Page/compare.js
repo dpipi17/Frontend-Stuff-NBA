@@ -1,4 +1,5 @@
 import PlayersSearchBar from './Custom Elements/playersSearchBar.js'
+import TwoColumnCompare from './twoColumnCompare.js'
 import Utils from './../js/utils.js'
 
 export default class ComparePage {
@@ -80,11 +81,22 @@ export default class ComparePage {
                         ${this.renderTopPart(players)}
                     </div>
 
+                    <div class="two_columns_compare_container">
+                        
+                    </div>
                 </div>
             `;
             callback(content);
 
             this.addListeners();
+
+            if (this.firstPlayer && this.secondPlayerId) {
+                TwoColumnCompare.render((content) => {
+                    var compareContainer = document.querySelector('.two_columns_compare_container');
+                    compareContainer.innerHTML = content
+                }, null);
+            }
+
         });
     }
 }

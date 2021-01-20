@@ -16,9 +16,6 @@ let routes = {
     '/Games/:gameDate': (params) => {
         GamesPage.render(updateMainContainer, params.gameDate)
     },
-    '/Game/:gameId': (params) => {
-        alert(params.gameId);
-    },
     '/Standings': () => {
         StandingPage.render(updateMainContainer);
     },
