@@ -826,6 +826,24 @@ my-team {
             }
         }
     }
+    .compare {
+        width: 90%;
+        .compare_top_part {
+            .chosen_player {
+                img {
+                    width: 200px;
+                }
+                my-players-search-bar {
+                    .search_players_container {
+                        width: 500px;
+                    }
+                }
+            }
+            .vs {
+                width: 150px;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 1150px) {
@@ -1059,6 +1077,29 @@ my-team {
             }
         }
     }
+    .compare {
+        .compare_top_part {
+            .chosen_player {
+                img {
+                    width: 150px;
+                }
+                my-players-search-bar {
+                    .search_players_container {
+                        width: 250px;
+                    }
+                    input {
+                        width: 150px;
+                    }
+                }
+            }
+            .vs {
+                width: 100px;
+            }
+        }
+        .two_columns_compare_container {
+            font-size: 14px;
+        }
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -1135,6 +1176,26 @@ my-team {
                     display: none;
                 }
             }
+        }
+    }
+    .compare {
+        .compare_top_part {
+            .chosen_player {
+                img {
+                    width: 100px;
+                }
+                my-players-search-bar {
+                    input {
+                        width: 100px;
+                    }
+                }
+            }
+            .vs {
+                width: 50px;
+            }
+        }
+        .two_columns_compare_container {
+            font-size: 12px;
         }
     }
 }

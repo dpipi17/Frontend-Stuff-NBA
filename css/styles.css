@@ -623,7 +623,16 @@ my-team .team:hover {
     .player .top_part .top_stats .main_stats .main_stat {
       padding: 25px 30px; }
     .player .top_part .top_stats .infos .info {
-      padding: 20px 30px; } }
+      padding: 20px 30px; }
+
+  .compare {
+    width: 90%; }
+    .compare .compare_top_part .chosen_player img {
+      width: 200px; }
+    .compare .compare_top_part .chosen_player my-players-search-bar .search_players_container {
+      width: 500px; }
+    .compare .compare_top_part .vs {
+      width: 150px; } }
 @media screen and (max-width: 1150px) {
   .articles my-article .article {
     width: 400px;
@@ -768,7 +777,18 @@ my-team .team:hover {
     .conference_standing my-team-row .team_name_row {
       width: 130px; }
       .conference_standing my-team-row .team_name_row img {
-        margin: 0px 5px; } }
+        margin: 0px 5px; }
+
+  .compare .compare_top_part .chosen_player img {
+    width: 150px; }
+  .compare .compare_top_part .chosen_player my-players-search-bar .search_players_container {
+    width: 250px; }
+  .compare .compare_top_part .chosen_player my-players-search-bar input {
+    width: 150px; }
+  .compare .compare_top_part .vs {
+    width: 100px; }
+  .compare .two_columns_compare_container {
+    font-size: 14px; } }
 @media screen and (max-width: 500px) {
   .players .rostercontainer {
     width: 95%; }
@@ -813,6 +833,15 @@ my-team .team:hover {
       .player .top_part .top_stats .infos .info {
         padding: 20px 8px; }
     .player .top_part .top_stats .hide_second {
-      display: none; } }
+      display: none; }
+
+  .compare .compare_top_part .chosen_player img {
+    width: 100px; }
+  .compare .compare_top_part .chosen_player my-players-search-bar input {
+    width: 100px; }
+  .compare .compare_top_part .vs {
+    width: 50px; }
+  .compare .two_columns_compare_container {
+    font-size: 12px; } }
 
 /*# sourceMappingURL=styles.css.map */
