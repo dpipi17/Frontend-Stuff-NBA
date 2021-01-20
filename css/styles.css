@@ -838,7 +838,8 @@ my-team .team:hover {
   .compare .compare_top_part .chosen_player img {
     width: 100px; }
   .compare .compare_top_part .chosen_player my-players-search-bar input {
-    width: 100px; }
+    width: 100px;
+    font-size: 10px; }
   .compare .compare_top_part .vs {
     width: 50px; }
   .compare .two_columns_compare_container {
