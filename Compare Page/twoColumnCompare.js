@@ -3,7 +3,6 @@ export default class TwoColumnCompare {
     static afterRender() {
         var table = document.getElementById('column_compare_table');
 
-        //TODO: need to verify cross-browser support of these vars
         var h = table.clientHeight,
             t = table.getBoundingClientRect().top,
             wT = window.pageYOffset || document.documentElement.scrollTop,
@@ -27,31 +26,21 @@ export default class TwoColumnCompare {
                 cells[0].style.transitionDelay = x / 20 + "s";
 
                 cells[2].style.backgroundImage = `linear-gradient(to left, ${secondColor}, ${secondColor})`;
-                cells[2].style.backgroundSize = (percent * firstValue) + "% 100%";
+                cells[2].style.backgroundSize = (percent * secondValue) + "% 100%";
                 cells[2].style.transitionDelay = x / 20 + "s";
             }
         }
     }
 
-    static render(callback, rows) {
+    static render(callback, rows, firstColumnName, secondColumnName) {
         let content = `
             <table id="column_compare_table">
-                <tr><th>Bam Adebayo</th><th>Season</th><th>Bam Adebayo</th></tr>
                 <tr>
-                    <td>3</td>
-                    <td>Value A</td>
-                    <td>3</td>
+                    <th>${firstColumnName}</th>
+                    <th></th>
+                    <th>${secondColumnName}</th>
                 </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Value B</td>
-                    <td>9</td>
-                </tr>
-                <tr>
-                    <td>15</td>
-                    <td>Value A</td>
-                    <td>8</td>
-                </tr>
+                ${rows.map(row => row.render()).join(' ')}
             </table>
         `;
         callback(content);

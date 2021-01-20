@@ -1,4 +1,5 @@
 import PlayersSearchBar from './Custom Elements/playersSearchBar.js'
+import CompareRow from './compareRow.js'
 import TwoColumnCompare from './twoColumnCompare.js'
 import Utils from './../js/utils.js'
 
@@ -9,13 +10,48 @@ export default class ComparePage {
         this.secondPlayerId = secondPlayerId;
     }
 
+    getRowsFromStats(firstStats, secondStats) {
+        var result = [];
+        firstStats = firstStats.latest;
+        secondStats = secondStats.latest;
+
+        result.push(new CompareRow("MIN", firstStats.mpg, secondStats.mpg));
+        result.push(new CompareRow("PTS", firstStats.ppg, secondStats.ppg));
+        result.push(new CompareRow("REB", firstStats.rpg, secondStats.rpg));
+        result.push(new CompareRow("AST", firstStats.apg, secondStats.apg));
+        result.push(new CompareRow("STL", firstStats.spg, secondStats.spg));
+        result.push(new CompareRow("BLK", firstStats.bpg, secondStats.bpg));
+        result.push(new CompareRow("FG%", firstStats.fgp, secondStats.fgp));
+        result.push(new CompareRow("3P%", firstStats.tpp, secondStats.tpp));
+        result.push(new CompareRow("FT%", firstStats.ftp, secondStats.ftp));
+
+        return result;
+    }
+
     loadData(callback) {
         var players = fetch('data/players.json')
             .then(response => response.json());
 
-        Promise.all([players]).then((values) => {
-            callback(values[0]);
-        });
+        if (this.firstPlayerId && this.secondPlayerId) {
+            var firstplayerStats = fetch("https://data.nba.net/prod/v1/2020/players/" + this.firstPlayerId + "_profile.json", {
+                    "method": "GET"
+                })
+                .then(response => response.json());
+
+            var secondPlayerStats = fetch("https://data.nba.net/prod/v1/2020/players/" + this.secondPlayerId + "_profile.json", {
+                    "method": "GET"
+                })
+                .then(response => response.json());
+
+            Promise.all([players, firstplayerStats, secondPlayerStats]).then((values) => {
+                callback(values[0], this.getRowsFromStats(values[1].league.standard.stats, values[2].league.standard.stats));
+            });
+        } else {
+            players.then((json) => {
+                callback(json, []);
+            })
+        }
+
     }
 
     playerWithSearch(id, players, alignItems, placeHolder, playerId) {
@@ -71,7 +107,7 @@ export default class ComparePage {
     }
 
     render(callback) {
-        this.loadData((players) => {
+        this.loadData((players, rows) => {
             this.firstPlayer = players.find(player => player.personId == this.firstPlayerId);
             this.secondPlayer = players.find(player => player.personId == this.secondPlayerId);
 
@@ -82,7 +118,7 @@ export default class ComparePage {
                     </div>
 
                     <div class="two_columns_compare_container">
-                        
+                        <img src="https://www.nba.com/stats/media/img/Gray_logoman.jpg"></img>
                     </div>
                 </div>
             `;
@@ -94,7 +130,7 @@ export default class ComparePage {
                 TwoColumnCompare.render((content) => {
                     var compareContainer = document.querySelector('.two_columns_compare_container');
                     compareContainer.innerHTML = content
-                }, null);
+                }, rows, this.firstPlayer.firstName + " " + this.firstPlayer.lastName, this.secondPlayer.firstName + " " + this.secondPlayer.lastName);
             }
 
         });

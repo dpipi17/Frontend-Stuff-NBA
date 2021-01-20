@@ -476,6 +476,8 @@ my-team .team:hover {
               object-fit: contain; }
             .compare .compare_top_part .chosen_player my-players-search-bar .search_players_container .search_player_card p {
               margin-left: 10px; }
+          .compare .compare_top_part .chosen_player my-players-search-bar .search_players_container .search_player_card:hover {
+            background-color: #f4f4f4; }
     .compare .compare_top_part .vs {
       width: 150px;
       align-content: center; }
@@ -488,13 +490,14 @@ my-team .team:hover {
     .compare .two_columns_compare_container table {
       width: 100%;
       border-collapse: separate;
-      border-spacing: 0 10px;
+      border-spacing: 0 5px;
       padding: 1em;
       margin: 1em auto;
       box-sizing: border-box;
       border: 1px solid #ccc; }
       .compare .two_columns_compare_container table th {
-        font-size: 1.2em; }
+        font-size: 1.2em;
+        padding-bottom: 20px; }
       .compare .two_columns_compare_container table td {
         font-weight: bold;
         border-bottom: 1px solid #fbfbfb;
