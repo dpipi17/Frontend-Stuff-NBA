@@ -16,7 +16,7 @@ export default class TwoColumnCompare {
 
                 var firstValue = Number(cells[0].innerHTML);
                 var secondValue = Number(cells[2].innerHTML);
-                let percent = 100 / (firstValue + secondValue);
+                let percent = 100 / (1.2 * (firstValue + secondValue));
                 let firstColor = firstValue >= secondValue ? "#006bb6" : "#DDDDDD";
                 let secondColor = secondValue >= firstValue ? "#006bb6" : "#DDDDDD";
 
