@@ -5,12 +5,13 @@ import Utils from './../js/utils.js'
 
 export default class ComparePage {
 
-    constructor(firstPlayerId, secondPlayerId) {
-        this.firstPlayerId = firstPlayerId;
-        this.secondPlayerId = secondPlayerId;
+    constructor(type, firstId, secondId) {
+        this.type = type ? type : "players";
+        this.firstId = firstId;
+        this.secondId = secondId;
     }
 
-    getRowsFromStats(firstStats, secondStats) {
+    getRowsFromPlayerStats(firstStats, secondStats) {
         var result = [];
         firstStats = firstStats.latest;
         secondStats = secondStats.latest;
@@ -32,19 +33,19 @@ export default class ComparePage {
         var players = fetch('data/players.json')
             .then(response => response.json());
 
-        if (this.firstPlayerId && this.secondPlayerId) {
-            var firstplayerStats = fetch("https://data.nba.net/prod/v1/2020/players/" + this.firstPlayerId + "_profile.json", {
+        if (this.firstId && this.secondId) {
+            var firstplayerStats = fetch("https://data.nba.net/prod/v1/2020/players/" + this.firstId + "_profile.json", {
                     "method": "GET"
                 })
                 .then(response => response.json());
 
-            var secondPlayerStats = fetch("https://data.nba.net/prod/v1/2020/players/" + this.secondPlayerId + "_profile.json", {
+            var secondPlayerStats = fetch("https://data.nba.net/prod/v1/2020/players/" + this.secondId + "_profile.json", {
                     "method": "GET"
                 })
                 .then(response => response.json());
 
             Promise.all([players, firstplayerStats, secondPlayerStats]).then((values) => {
-                callback(values[0], this.getRowsFromStats(values[1].league.standard.stats, values[2].league.standard.stats));
+                callback(values[0], this.getRowsFromPlayerStats(values[1].league.standard.stats, values[2].league.standard.stats));
             });
         } else {
             players.then((json) => {
@@ -67,8 +68,8 @@ export default class ComparePage {
     }
 
     onPlayerChoos() {
-        if (this.firstPlayerId && this.secondPlayerId) {
-            window.location = '#/Compare/' + this.firstPlayerId + "/" + this.secondPlayerId;
+        if (this.firstId && this.secondId) {
+            window.location = '#/Compare?type=players&firstId=' + this.firstId + "&secondId=" + this.secondId
         }
     }
 
@@ -77,8 +78,8 @@ export default class ComparePage {
         var leftPlayerImg = document.querySelector(".compare_top_part .left img");
         var leftSeaBar = document.getElementById("left_search_bar");
         leftSeaBar.addEventListener("playerChoose", (e) => {
-            this.firstPlayerId = e.detail.personId;
-            leftPlayerImg.src = Utils.getPlayerImageSrc(this.firstPlayerId);
+            this.firstId = e.detail.personId;
+            leftPlayerImg.src = Utils.getPlayerImageSrc(this.firstId);
             this.onPlayerChoos();
         });
 
@@ -86,8 +87,8 @@ export default class ComparePage {
         var rightPlayerImg = document.querySelector(".compare_top_part .right img");
         var rightSeaBar = document.getElementById("right_search_bar");
         rightSeaBar.addEventListener("playerChoose", (e) => {
-            this.secondPlayerId = e.detail.personId;
-            rightPlayerImg.src = Utils.getPlayerImageSrc(this.secondPlayerId);
+            this.secondId = e.detail.personId;
+            rightPlayerImg.src = Utils.getPlayerImageSrc(this.secondId);
             this.onPlayerChoos();
         });
     }
@@ -95,21 +96,21 @@ export default class ComparePage {
     renderTopPart(players) {
         return `
             <div class="chosen_player left">
-                ${this.playerWithSearch("left_search_bar", players, "flex-start", "Search first player...", this.firstPlayerId)}
+                ${this.playerWithSearch("left_search_bar", players, "flex-start", "Search first player...", this.firstId)}
             </div>
 
             <img class="vs" src="https://www.pngkey.com/png/full/20-208774_torrent-vs-magnet-link-graphic-design.png"></img>
 
             <div class="chosen_player right">
-                ${this.playerWithSearch("right_search_bar", players, "flex-end", "Search second player...", this.secondPlayerId)}
+                ${this.playerWithSearch("right_search_bar", players, "flex-end", "Search second player...", this.secondId)}
             </div>
         `;
     }
 
     render(callback) {
         this.loadData((players, rows) => {
-            this.firstPlayer = players.find(player => player.personId == this.firstPlayerId);
-            this.secondPlayer = players.find(player => player.personId == this.secondPlayerId);
+            this.firstPlayer = players.find(player => player.personId == this.firstId);
+            this.secondPlayer = players.find(player => player.personId == this.secondId);
 
             let content = `
                 <div class="compare">
@@ -126,7 +127,7 @@ export default class ComparePage {
 
             this.addListeners();
 
-            if (this.firstPlayer && this.secondPlayerId) {
+            if (this.firstPlayer && this.secondPlayer) {
                 TwoColumnCompare.render((content) => {
                     var compareContainer = document.querySelector('.two_columns_compare_container');
                     compareContainer.innerHTML = content

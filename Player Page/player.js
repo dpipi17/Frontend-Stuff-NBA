@@ -124,9 +124,6 @@ export default class PlayerPage {
         this.loadData((teamsInfo, playerStats, players) => {
             var team = this.getTeamWithTeamId(teamsInfo, playerStats.teamId);
             var playerProfile = players.find(player => player.personId == playerId);
-            console.log(playerProfile);
-            console.log(team);
-            console.log(playerStats);
             let content = `
                 <div class="player">
                     <div class="top_part" style="background-color: ${team.primaryColor};">
@@ -136,6 +133,10 @@ export default class PlayerPage {
             `;
 
             callback(content);
+
+            document.querySelector(".btn").addEventListener("click", () => {
+                window.location = '#/Compare?type=players&firstId=' + playerId + "&secondId="
+            });
         }, playerId);
     }
 }

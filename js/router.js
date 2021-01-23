@@ -31,15 +31,11 @@ let routes = {
     '/Player/:playerId': (params) => {
         PlayerPage.render(updateMainContainer, params.playerId);
     },
-    '/Compare': () => {
-        let comparePage = new ComparePage();
+    '/Compare': (params, query) => {
+        let queryObj = parseQuery(query);
+        let comparePage = new ComparePage(queryObj['type'], queryObj['firstId'], queryObj['secondId']);
         comparePage.render(updateMainContainer)
-    },
-    '/Compare/:firstPlayerId/:secondPlayerId': (params) => {
-        let comparePage = new ComparePage(params.firstPlayerId, params.secondPlayerId);
-        comparePage.render(updateMainContainer, params.firstPlayerId, params.secondPlayerId)
     }
-
 };
 
 window.addEventListener("load", () => {
@@ -50,4 +46,14 @@ window.addEventListener("load", () => {
 function updateMainContainer(content) {
     var mainContainer = document.querySelector('#mainContainer');
     mainContainer.innerHTML = content
+}
+
+function parseQuery(queryString) {
+    var query = {};
+    var pairs = (queryString[0] === '?' ? queryString.substr(1) : queryString).split('&');
+    for (var i = 0; i < pairs.length; i++) {
+        var pair = pairs[i].split('=');
+        query[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1] || '');
+    }
+    return query;
 }
