@@ -112,6 +112,21 @@ my-slide .slide {
       .articles my-article .article .text_container p {
         padding: 0px 50px;
         font-size: 22px; }
+  .articles my-article:hover {
+    opacity: 0.8;
+    transform: translateY(2px);
+    cursor: pointer; }
+
+.articlePageContainer {
+  margin: 10px auto;
+  background-color: rgba(255, 255, 255, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 70%; }
+  .articlePageContainer img {
+    width: 100%; }
 
 my-team .team {
   display: flex;

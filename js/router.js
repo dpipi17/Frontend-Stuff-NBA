@@ -1,4 +1,5 @@
 import HomePage from './../Home Page/home.js';
+import ArticlePage from './../Article Page/articlePage.js'
 import TeamsPage from './../Teams page/teams.js'
 import StandingPage from './../Standing Page/standing.js'
 import GamesPage from './../Games Page/games.js'
@@ -9,6 +10,9 @@ import ComparePage from './../Compare Page/compare.js'
 let routes = {
     '*': () => {
         HomePage.render(updateMainContainer);
+    },
+    '/Article/:articleId': (params) => {
+        ArticlePage.render(updateMainContainer, params.articleId);
     },
     '/Games': () => {
         GamesPage.render(updateMainContainer, GamesPage.dateToGameDate(new Date()))
@@ -46,6 +50,7 @@ window.addEventListener("load", () => {
 function updateMainContainer(content) {
     var mainContainer = document.querySelector('#mainContainer');
     mainContainer.innerHTML = content
+    window.scrollTo(0, 0);
 }
 
 function parseQuery(queryString) {

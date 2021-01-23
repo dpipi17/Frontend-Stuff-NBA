@@ -14,6 +14,10 @@ export default class Article extends HTMLElement {
                 <div>
             </div>
         `;
+
+        this.addEventListener('click', () => {
+            window.location = `#/Article/${this.getAttribute('articleId')}`;
+        })
     }
 }
 
