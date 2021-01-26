@@ -1,5 +1,5 @@
 import teamNameRow from './Custom Elements/teamNameRow.js'
-import TeamsPage from './../Teams page/teams.js'
+import Utils from './../js/utils.js'
 
 export default class ConferenceStanding {
 
@@ -27,8 +27,8 @@ export default class ConferenceStanding {
             <td>
               <my-team-row name="${teamData.teamSitesOnly.teamKey} ${teamData.teamSitesOnly.teamNickname}"
                            rank="${teamData.confRank}"
-                           imageSrc="${TeamsPage.photo_links[teamData.teamSitesOnly.teamTricode]}"
-                           teamPage="${TeamsPage.teams_page_links[teamData.teamSitesOnly.teamTricode]}"> 
+                           imageSrc="${Utils.photo_links[teamData.teamSitesOnly.teamTricode]}"
+                           teamPage="${Utils.teams_page_links[teamData.teamSitesOnly.teamTricode]}"> 
               </my-team-row>
             </td>
             <td>${teamData.win}</td>

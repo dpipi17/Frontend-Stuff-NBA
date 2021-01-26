@@ -1,3 +1,5 @@
+import Utils from './../js/utils.js'
+
 export default class PlayerPage {
 
     static getTeamWithTeamId(teamsInfos, teamId) {
@@ -30,8 +32,8 @@ export default class PlayerPage {
         return `
             <div class="profile_container">
                 <div class="imgs_container">
-                    <img class="team_logo" src=" https://cdn.nba.com/logos/nba/${playerProfile.teamId}/global/L/logo.svg" alt=""></img>
-                    <img class="profile_img" src="https://cdn.nba.com/headshots/nba/latest/1040x760/${playerProfile.personId}.png" alt=""></img>
+                    <img class="team_logo" src="${Utils.getTeamLogoImage(playerProfile.teamId)}" alt=""></img>
+                    <img class="profile_img" src="${Utils.getPlayerImageSrc(playerProfile.personId)}" alt=""></img>
                 </div>
 
                 <div class="profile_info_container"> 

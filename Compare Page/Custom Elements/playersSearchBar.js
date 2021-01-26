@@ -1,3 +1,5 @@
+import Utils from './../../js/utils.js'
+
 export default class PlayersSearchBar extends HTMLElement {
 
     createPlayerElement(player) {
@@ -12,7 +14,7 @@ export default class PlayersSearchBar extends HTMLElement {
         })
 
         var image = document.createElement("img");
-        image.src = "https://cdn.nba.com/headshots/nba/latest/1040x760/" + player.personId + ".png"
+        image.src = Utils.getPlayerImageSrc(player.personId);
 
         var name = document.createElement("p");
         name.innerHTML = player.firstName + " " + player.lastName;

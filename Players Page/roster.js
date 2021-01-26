@@ -1,4 +1,4 @@
-import TeamsPage from './../Teams page/teams.js'
+import Utils from './../js/utils.js'
 
 export default class Roster {
 
@@ -23,7 +23,7 @@ export default class Roster {
                 <tr class="roster_row">
                     <td>
                         <a href="#/Player/${player.personId}" class="player_field">
-                            <img src="https://cdn.nba.com/headshots/nba/latest/1040x760/${player.personId}.png" alt=""></img>
+                            <img src="${Utils.getPlayerImageSrc(player.personId)}" alt=""></img>
                             <p>${player.temporaryDisplayName}</p>
                         </a>
                     </td>
@@ -41,8 +41,8 @@ export default class Roster {
         return `    
           <div class="roster">
 
-            <a href="${TeamsPage.teams_page_links[teamInfo.triCode]}" class="rosterHeaderContainer">
-                <img src="${TeamsPage.photo_links[teamInfo.triCode]}"></img>
+            <a href="${Utils.teams_page_links[teamInfo.triCode]}" class="rosterHeaderContainer">
+                <img src="${Utils.photo_links[teamInfo.triCode]}"></img>
                 <h2>${teamInfo.displayName}</h2>
             </a>
             <table class="styled-table">
