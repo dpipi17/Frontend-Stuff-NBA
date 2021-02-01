@@ -98,7 +98,8 @@ my-slide .slide {
     height: 300px;
     margin-top: 30px;
     display: flex;
-    background-color: rgba(255, 255, 255, 0.95); }
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 5px; }
     .articles my-article .article img {
       display: flex;
       width: 60%;
@@ -120,13 +121,20 @@ my-slide .slide {
 .articlePageContainer {
   margin: 10px auto;
   background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
   width: 70%; }
+  .articlePageContainer h1 {
+    text-align: center; }
   .articlePageContainer img {
-    width: 100%; }
+    width: 100%;
+    padding-bottom: 10px; }
+  .articlePageContainer p {
+    text-align: start;
+    padding: 0px 30px;
+    font-family: Helvetica, Arial, sans-serif; }
 
 my-team .team {
   display: flex;
@@ -720,6 +728,11 @@ my-team .team:hover {
 
   .articles {
     justify-content: center; }
+
+  .articlePageContainer {
+    width: 98%; }
+    .articlePageContainer p {
+      padding: 0px 10px 0px; }
 
   .games .datePickerContainer {
     width: 95%; }

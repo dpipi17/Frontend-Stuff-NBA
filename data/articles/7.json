@@ -2,6 +2,12 @@
     "articleId": "7",
     "imageSrc": "https://cdn.nba.com/manage/2021/01/nba-ball-general-view-iso.jpg",
     "title": "NBA games",
-    "text": "The NBA's COVID-19 protocols have resulted in multiple...",
+    "texts": [
+        "The NBA and National Basketball Players Association announced an agreement on additional COVID-19 protocols on Tuesday. ",
+        "The new league rules, which the league and NBPA said supplement the current health and safety protocols, were announced amid rising positive COVID-19 rates both nationally and within the NBA, which have caused multiple NBA games to be postponed. Among them, Tuesday's matchup between the Celtics and Bulls was postponed due to the league's COVID-19 protocols, joining Monday's contest between Dallas and New Orleans. Each of the Celtic's last three games has been postponed and so far five NBA games have been postponed.",
+        "Among the additional protocols, the NBA will now ban players from leaving their hotel when on the road. Players will also not be able to interact with non-team guests at the hotel, per the league announcement. For at least the next two weeks, when at home, players will also be forced to remain at their residence. ...at all times except to attend team-related activities at the team facility or arena.",
+        "Players will now additionally be required to wear face masks on the bench at all times. Coaches and team staff must wear masks at all times during games and, for at least the next two weeks, any pre-game meeting in the locker room is limited to no more than 10 minutes in duration.",
+        "The NBA is not currently planning to revert to a league-wide bubble for the 2020–21 season. NBA spokesman Mike Bass also told ESPN on Sunday that, There are no plans to pause the season, and we will continue to be guided by our medical experts and health and safety protocols. NBA commissioner Adam Silver said in December the league has lots of alternative plans in the drawers, as it hopes to manage the continued COVID-19 crisis. The NBA season began on Dec. 22. "
+    ],
     "date": "7 days ago"
 }

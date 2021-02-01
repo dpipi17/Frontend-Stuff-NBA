@@ -2,6 +2,12 @@
     "articleId": "6",
     "imageSrc": "https://cdn.nba.com/manage/2020/12/nba-logo-court.jpg",
     "title": "Season Schedule",
-    "text": "League announces three game modifications for next week..",
+    "texts": [
+        "NEW YORK – The National Basketball Association announced today that it will reschedule during the First Half of the season certain games that were previously postponed.  In addition, certain games that were otherwise scheduled for the Second Half will now be scheduled into the First Half, with a specific focus on the teams with the most postponed games to date.  To create the maximum flexibility, dates of existing games may also be moved in order to schedule additional games into the First Half.",
+        "Below are the initial changes to the upcoming schedule:",
+        "Portland at Washington – Feb. 2, 8 p.m. ET (previously targeted for Second Half)",
+        "Washington at Charlotte – Feb. 7, 1 p.m. ET (rescheduled from Jan. 20)",
+        "Portland at Charlotte – Postponed on Feb. 7, moved to Second Half"
+    ],
     "date": "7 days ago"
 }

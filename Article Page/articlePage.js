@@ -12,9 +12,9 @@ export default class ArticlePage {
         this.loadData((article) => {
             let content = `
                 <div class="articlePageContainer">
-                    <img src="${article.imageSrc}"></img>
                     <h1>${article.title}</h1>
-                    <p>${article.text}</p>
+                    <img src="${article.imageSrc}"></img>
+                    ${article.texts.map(paragraph => "<p>" + paragraph + "</p>").join(' ')}
                 </div>
             `;
 

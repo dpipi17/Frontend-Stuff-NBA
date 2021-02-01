@@ -123,6 +123,7 @@ my-slide {
             margin-top: 30px;
             display: flex;
             background-color: $base-white;
+            border-radius: 5px;
             img {
                 display: flex;
                 width: 60%;
@@ -151,13 +152,22 @@ my-slide {
 .articlePageContainer {
     margin: 10px auto;
     background-color: $base-white;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
     width: 70%;
+    h1 {
+        text-align: center;
+    }
     img {
         width: 100%;
+        padding-bottom: 10px;
+    }
+    p {
+        text-align: start;
+        padding: 0px 30px;
+        font-family: Helvetica, Arial, sans-serif;
     }
 }
 
@@ -971,6 +981,12 @@ my-team {
     }
     .articles {
         justify-content: center;
+    }
+    .articlePageContainer {
+        width: 98%;
+        p {
+            padding: 0px 10px 0px;
+        }
     }
     .games {
         .datePickerContainer {
