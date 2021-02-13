@@ -42,10 +42,22 @@ let routes = {
     }
 };
 
-window.addEventListener("load", () => {
-    var router = new Navigo(null, true, '#');
-    router.on(routes).resolve();
-})
+// window.addEventListener("load", () => {
+//     var router = new Navigo(null, true, '#');
+//     router.on(routes).resolve();
+// })
+
+let handleRouting = () => {
+    let currentUri = window.location.hash || false;
+    if (currentUri !== false) {
+        currentUri = currentUri.substring(1);
+    }
+    routes[currentUri || '*']();
+};
+
+window.addEventListener('load', handleRouting);
+
+window.addEventListener('hashchange', handleRouting);
 
 function updateMainContainer(content) {
     var mainContainer = document.querySelector('#mainContainer');
