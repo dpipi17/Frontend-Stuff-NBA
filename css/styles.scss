@@ -87,6 +87,8 @@ body {
 }
 
 my-slide {
+    display: flex;
+    align-items: center;
     .slide {
         background-color: black;
         img {

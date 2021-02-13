@@ -69,24 +69,27 @@ body {
 [data-component="slideshow"] .slide.active {
   display: flex; }
 
-my-slide .slide {
-  background-color: black; }
-  my-slide .slide img {
-    display: flex;
-    object-fit: contain;
-    width: 60%;
-    padding: 30px 0px;
-    margin-left: 50px; }
-  my-slide .slide .text_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgba(255, 255, 255, 0.95);
-    flex-direction: column;
-    padding: 0px 20px; }
-    my-slide .slide .text_container p {
-      padding: 0px 50px;
-      font-size: 24px; }
+my-slide {
+  display: flex;
+  align-items: center; }
+  my-slide .slide {
+    background-color: black; }
+    my-slide .slide img {
+      display: flex;
+      object-fit: contain;
+      width: 60%;
+      padding: 30px 0px;
+      margin-left: 50px; }
+    my-slide .slide .text_container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: rgba(255, 255, 255, 0.95);
+      flex-direction: column;
+      padding: 0px 20px; }
+      my-slide .slide .text_container p {
+        padding: 0px 50px;
+        font-size: 24px; }
 
 .articles {
   display: flex;
