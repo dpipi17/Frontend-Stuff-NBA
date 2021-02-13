@@ -27,8 +27,8 @@ export default class ConferenceStanding {
             <td>
               <my-team-row name="${teamData.teamSitesOnly.teamKey} ${teamData.teamSitesOnly.teamNickname}"
                            rank="${teamData.confRank}"
-                           imageSrc="${Utils.photo_links[teamData.teamSitesOnly.teamTricode]}"
-                           teamPage="${Utils.teams_page_links[teamData.teamSitesOnly.teamTricode]}"> 
+                           imageSrc="${Utils.photo_links()[teamData.teamSitesOnly.teamTricode]}"
+                           teamPage="${Utils.teams_page_links()[teamData.teamSitesOnly.teamTricode]}"> 
               </my-team-row>
             </td>
             <td>${teamData.win}</td>

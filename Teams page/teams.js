@@ -21,8 +21,8 @@ export default class TeamsPage {
     static getTeamComponents(data) {
         return data.map(team => `
             <my-team name="${team.full_name}"
-                     imageSrc="${Utils.photo_links[team.abbreviation]}"
-                     teamPage="${Utils.teams_page_links[team.abbreviation]}">
+                     imageSrc="${Utils.photo_links()[team.abbreviation]}"
+                     teamPage="${Utils.teams_page_links()[team.abbreviation]}">
             </my-team>
         `);
     }

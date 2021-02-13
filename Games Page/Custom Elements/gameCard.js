@@ -21,7 +21,7 @@ export default class GameCard extends HTMLElement {
         this.innerHTML = `
             <a class="gamecard" href="https://www.nba.com/game/${game.vTeam.triCode.toLowerCase()}-vs-${game.hTeam.triCode.toLowerCase()}-${game.gameId}">
                 <div class="team_in_card">
-                    <img src=${Utils.photo_links[game.vTeam.triCode]} alt="">
+                    <img src=${Utils.photo_links()[game.vTeam.triCode]} alt="">
                     <h3>${game.vTeam.triCode}</h3>
                     <p>${game.vTeam.win}-${game.vTeam.loss}</p>
                 </div>
@@ -31,7 +31,7 @@ export default class GameCard extends HTMLElement {
                 </div>
 
                 <div class="team_in_card">
-                <img src=${Utils.photo_links[game.hTeam.triCode]} alt="">
+                <img src=${Utils.photo_links()[game.hTeam.triCode]} alt="">
                 <h3>${game.hTeam.triCode}</h3>
                 <p>${game.hTeam.win}-${game.hTeam.loss}</p>
             </div>

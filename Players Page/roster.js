@@ -41,8 +41,8 @@ export default class Roster {
         return `    
           <div class="roster">
 
-            <a href="${Utils.teams_page_links[teamInfo.triCode]}" class="rosterHeaderContainer">
-                <img src="${Utils.photo_links[teamInfo.triCode]}"></img>
+            <a href="${Utils.teams_page_links()[teamInfo.triCode]}" class="rosterHeaderContainer">
+                <img src="${Utils.photo_links()[teamInfo.triCode]}"></img>
                 <h2>${teamInfo.displayName}</h2>
             </a>
             <table class="styled-table">
