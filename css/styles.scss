@@ -90,6 +90,8 @@ my-slide {
     display: flex;
     align-items: center;
     .slide {
+        display: flex;
+        align-items: center;
         background-color: black;
         img {
             display: flex;
@@ -479,6 +481,7 @@ my-team {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 100px;
     .top_part {
         color: $base-white;
         width: 100%;
@@ -492,6 +495,7 @@ my-team {
             align-items: stretch;
             .imgs_container {
                 display: flex;
+                align-items: center;
                 width: 50%;
                 justify-content: flex-end;
                 .team_logo {
@@ -924,9 +928,10 @@ my-team {
         }
     }
     .navigation {
+        z-index: 2000;
         display: none;
         position: absolute;
-        margin-top: 400px;
+        top: 55px;
         text-align: center;
         width: 100%;
         background-color: rgba(5, 28, 45, 0.95);

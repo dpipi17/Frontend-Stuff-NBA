@@ -73,6 +73,8 @@ my-slide {
   display: flex;
   align-items: center; }
   my-slide .slide {
+    display: flex;
+    align-items: center;
     background-color: black; }
     my-slide .slide img {
       display: flex;
@@ -383,7 +385,8 @@ my-team .team:hover {
 .player {
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  margin-bottom: 100px; }
   .player .top_part {
     color: rgba(255, 255, 255, 0.95);
     width: 100%;
@@ -397,6 +400,7 @@ my-team .team:hover {
       align-items: stretch; }
       .player .top_part .profile_container .imgs_container {
         display: flex;
+        align-items: center;
         width: 50%;
         justify-content: flex-end; }
         .player .top_part .profile_container .imgs_container .team_logo {
@@ -685,9 +689,10 @@ my-team .team:hover {
     cursor: pointer; }
 
   .navigation {
+    z-index: 2000;
     display: none;
     position: absolute;
-    margin-top: 400px;
+    top: 55px;
     text-align: center;
     width: 100%;
     background-color: rgba(5, 28, 45, 0.95); }
