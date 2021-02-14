@@ -23,11 +23,11 @@ export default class TwoColumnCompare {
 
                 cells[0].style.backgroundImage = `linear-gradient(to left, ${firstColor}, ${firstColor})`;
                 cells[0].style.backgroundSize = (percent * firstValue) + "% 100%";
-                cells[0].style.transitionDelay = x / 20 + "s";
+                cells[0].style.transitionDelay = x / 50 + "s";
 
                 cells[2].style.backgroundImage = `linear-gradient(to left, ${secondColor}, ${secondColor})`;
                 cells[2].style.backgroundSize = (percent * secondValue) + "% 100%";
-                cells[2].style.transitionDelay = x / 20 + "s";
+                cells[2].style.transitionDelay = x / 50 + "s";
             }
         }
     }

@@ -600,6 +600,7 @@ my-team {
                 display: flex;
                 flex-direction: column;
                 .search_players_container {
+                    z-index: 2000;
                     position: absolute;
                     display: flex;
                     flex-wrap: wrap;
@@ -631,10 +632,21 @@ my-team {
             align-content: center;
         }
     }
+    .select_type_container {
+        padding: 10px 0;
+        background-color: $base-blue;
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        select {
+            width: 100px;
+            font-size: 20px;
+        }
+    }
     .two_columns_compare_container {
         display: flex;
         justify-content: center;
-        margin-top: 50px;
         padding: 20px 20px 10px;
         background-color: $base-white;
         table {
@@ -1135,6 +1147,12 @@ my-team {
             }
             .vs {
                 width: 100px;
+            }
+        }
+        .select_type_container {
+            select {
+                width: 80px;
+                font-size: 15px;
             }
         }
         .two_columns_compare_container {

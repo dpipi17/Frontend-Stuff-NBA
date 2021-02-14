@@ -137,7 +137,7 @@ export default class PlayerPage {
             callback(content);
 
             document.querySelector(".btn").addEventListener("click", () => {
-                window.location = '#/Compare?type=players&firstId=' + playerId + "&secondId="
+                window.location = '#/Compare?type=season&firstId=' + playerId + "&secondId="
             });
         }, playerId);
     }

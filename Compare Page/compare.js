@@ -6,15 +6,21 @@ import Utils from './../js/utils.js'
 export default class ComparePage {
 
     constructor(type, firstId, secondId) {
-        this.type = type ? type : "players";
+        this.type = type ? type : "season";
         this.firstId = firstId;
         this.secondId = secondId;
     }
 
     getRowsFromPlayerStats(firstStats, secondStats) {
         var result = [];
-        firstStats = firstStats.latest;
-        secondStats = secondStats.latest;
+
+        if (this.type == 'season') {
+            firstStats = firstStats.latest;
+            secondStats = secondStats.latest;
+        } else {
+            firstStats = firstStats.careerSummary;
+            secondStats = secondStats.careerSummary;
+        }
 
         result.push(new CompareRow("MIN", firstStats.mpg, secondStats.mpg));
         result.push(new CompareRow("PTS", firstStats.ppg, secondStats.ppg));
@@ -69,7 +75,7 @@ export default class ComparePage {
 
     onPlayerChoos() {
         if (this.firstId && this.secondId) {
-            window.location = '#/Compare?type=players&firstId=' + this.firstId + "&secondId=" + this.secondId
+            window.location = `#/Compare?type=${this.type}&firstId=${this.firstId}&secondId=${this.secondId}`
         }
     }
 
@@ -91,6 +97,16 @@ export default class ComparePage {
             rightPlayerImg.src = Utils.getPlayerImageSrc(this.secondId);
             this.onPlayerChoos();
         });
+
+
+        var selectBox = document.querySelector(".select_type_container select");
+        selectBox.value = this.type;
+        selectBox.addEventListener("change", () => {
+            this.type = selectBox.value;
+            if (this.firstId && this.secondId) {
+                window.location = `#/Compare?type=${selectBox.value}&firstId=${this.firstId}&secondId=${this.secondId}`;
+            }
+        })
     }
 
     renderTopPart(players) {
@@ -116,6 +132,13 @@ export default class ComparePage {
                 <div class="compare">
                     <div class="compare_top_part">
                         ${this.renderTopPart(players)}
+                    </div>
+
+                    <div class="select_type_container">
+                        <select>
+                            <option value="season">Season</option>
+                            <option value="career">Career</option>
+                        </select>
                     </div>
 
                     <div class="two_columns_compare_container">
